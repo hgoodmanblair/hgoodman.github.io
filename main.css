@@ -7,14 +7,7 @@ body{
   text-align:center;
 
 }
-.circle{
-  border-radius:10000000000000px;
-  background:black;
-  padding:0px;
-  position:absolute;
-  z-index:5;
-  animation:circle 3s 1;
-}
+
 @Keyframes circle{
   from{padding:100vw;}
   to{padding:0px;}
