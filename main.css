@@ -13,6 +13,7 @@ body{
      display:flex;
   align-items:center;
   justify-content:center;
+  flex-direction:column;
 }
 
 .headerlogo{
@@ -46,7 +47,7 @@ hr{
   margin:20px;
 }
 .fa-brands{
-  color:white;
+  color:#37ab76;
   font-size:50px;
   text-shadow:0px 0px 30px black, -5px 5px black;
   margin:10px;
@@ -55,11 +56,11 @@ hr{
 }
 .fa-brands:hover{
   transition:0.3s;
-  color:#37ab76;
+  color:white;
      text-shadow:0px 0px 30px #242424;
 }
 .fa-solid{
-   color:white;
+   color:#37ab76;
   font-size:50px;
   text-shadow:0px 0px 30px black, -5px 5px black;
   margin:10px;
@@ -68,9 +69,32 @@ hr{
 }
 .fa-solid:hover{
   transition:0.3s;
-  color:#37ab76;
+  color:white;
    text-shadow:0px 0px 30px #242424;
 }
 a{
   text-decoration:none;
+}
+.bsection{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+}
+.sectionb{
+  font-size:20px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight:bold;
+  color:#37ab76;
+  margin:20px;
+  text-shadow:0px 0px 30px black, -5px 5px black;
+  background:black;
+  padding:30px;
+     transition:0.3s;
+  
+}
+.sectionb:hover{
+  color:white;
+   box-shadow:0px 0px 30px #242424;
+   transition:0.3s;
 }
