@@ -1,6 +1,7 @@
 body{
-  background-image:linear-gradient(to right, #242424, black);
+  background-image:url('https://bluehollowdev.github.io/411046-digital-art-TheFatRat-pixel-art-cover-art-fantasy.jpg');
     display:flex;
+    background-size:cover;
   justify-content:center;
   align-items:center;
   text-align:center;
