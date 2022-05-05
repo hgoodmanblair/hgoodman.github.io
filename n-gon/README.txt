@@ -1,2 +1,0 @@
-Game made by landgreen.
-
