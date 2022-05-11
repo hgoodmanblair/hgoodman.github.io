@@ -12,6 +12,10 @@ body{
   align-items:center;
   text-align:center;
 }
+.logo{
+  width:200px;
+  margin:-60px;
+}
 .background-img{
   top: 50%;
    left: 50%;
