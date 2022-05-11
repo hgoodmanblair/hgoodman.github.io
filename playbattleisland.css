@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+  
+   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+body{
+  overflow-x:hidden;
+  overflow-y:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.background-img{
+  top: 50%;
+   left: 50%;
+  background-size:cover;
+ filter: blur(7px) brightness(20%);
+ position:absolute;
+ margin:-8px;
+ width:100vw;
+ height:100vh;
+ margin-top: -50vh;
+   margin-left: -50vw;
+ transform:scale(1.1);
+ z-index:-10;
+}
+.container{
+  width:100vw;
+  height:100vh;
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  flex-direction:column;
+}
+.title{
+  font-family:bungee;
+  z-index:10;
+  font-size:70px;
+    color: black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  letter-spacing:2px;
+  animation:titleonload 4s 1;
+   text-shadow:black; 0px 0px 24px;
+}
+hr{
+  animation:hr 3s 1;
+  width:700px;
+  margin:10px 0px;
+}
+button{
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px 0px;
+  border:none;
+  width:220px;
+  background:linear-gradient(to bottom right,black, #191919);
+  border-radius:100000000px;
+  font-weight:bold;
+  letter-spacing:1.5px;
+  color:white;
+  margin:20px;
+  font-size:15px;
+  box-shadow:black; 0px 0px 24px;
+    transition:0.3s;
+}
+button:hover{
+  background:linear-gradient(to bottom right,#1e70ff, blue);
+  transition:0.3s;
+}
+.fa-solid{
+  font-size:20px;
+  margin:0px 10px;
+}
+@keyframes titleonload{
+  from{letter-spacing:50px;opacity:0%;}
+  to{2px;opacity:100%;}
+}
+
+@keyframes hr{
+  from{width:0px;}
+  to{width:700px;
+}
