@@ -61,7 +61,7 @@ hr{
   width:700px;
   margin:10px 0px;
 }
-button{
+.playnowb{
    display:flex;
   justify-content:center;
   align-items:center;
@@ -78,11 +78,18 @@ button{
   font-size:15px;
   box-shadow:black; 0px 0px 24px;
     transition:0.3s;
+
 }
-button:hover{
+.playnowb:hover{
   background:linear-gradient(to bottom right,#1e70ff, blue);
   transition:0.3s;
   width:250px;
+  cursor:pointer;
+}
+a{
+  text-decoration:none;
+    font-style:none;
+  
 }
 .fa-desktop, .fa-mobile-screen-button{
   font-size:20px;
