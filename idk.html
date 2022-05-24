@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
     body{
-      background:black;
-      color:blue;
-      letter-spacing:1px;
+      background:white;
+      color:red;
       font-family:courier;
       display:flex;
       justify-content:center;
@@ -15,18 +15,14 @@
       width:100vw;
       overflow-x:hidden;
       white-space: normal;
+      font-family: 'Noto Sans JP', sans-serif;
      
     }
     #demo1{
       margin:-8px;
-      font-size:15px;
+      font-size:13px;
       width:100vw;
-      animation:color 0.5s infinite linear;
-}
-@keyframes color{
-  from{color:lime;}
-  to{color:lime;}
-}
+
   </style>
 <body>
 
@@ -41,9 +37,16 @@
 <script>
 
 
-setInterval(function() {myFunc("param1", "param2")}, 0100);
+let emoji = prompt("What emoji do u want to spam? Click Search+Shift+Space to see them all.");
 
-getrandom();
+if (emoji != null) {
+  var emojiselected = emoji;
+}
+
+
+
+setInterval(function() {myFunc("param1", "param2")}, 0000);
+
 
 
 function myFunc(p1, p2) {
@@ -51,9 +54,12 @@ function myFunc(p1, p2) {
  
   window.scrollTo(0, document.body.scrollHeight);
  
-  document.getElementById("demo1").innerHTML += "doctype.returncode(wfwfmwksmskfmkmskfmkwmkfmwf.hacked)return";
+  document.getElementById("demo1").innerHTML += emojiselected;
  
-   document.getElementById("demo1").style.color = "#" +window.randomColor;
+     var font = document.getElementById("demo1").style.fontSize;
+        font++;
+   
+   
 }
 </script>
 
