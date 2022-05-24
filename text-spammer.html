@@ -20,7 +20,7 @@
     }
     #demo1{
       margin:-8px;
-      font-size:13px;
+      font-size:15px;
       width:100vw;
 
   </style>
@@ -37,7 +37,7 @@
 <script>
 
 
-let emoji = prompt("What emoji do u want to spam? Click Search+Shift+Space to see them all.");
+let emoji = prompt("What emoji do u want to spam? Click SEARCH+SHIFT+SPACE to see them all. when u think u have waited long enough, press CTRL+A then press CTRL+C to copy all the spammed text. Lastly paste the text into an email and send it to your freind! Im sure they will thank you!", " 😀urmother");
 
 if (emoji != null) {
   var emojiselected = emoji;
@@ -54,7 +54,11 @@ function myFunc(p1, p2) {
  
   window.scrollTo(0, document.body.scrollHeight);
  
-  document.getElementById("demo1").innerHTML += emojiselected;
+  document.getElementById("demo1").innerHTML +=
+  emojiselected +  emojiselected + emojiselected + emojiselected+  emojiselected + emojiselected + emojiselected
+  +  emojiselected + emojiselected + emojiselected+  emojiselected + emojiselected + emojiselected
+  +  emojiselected + emojiselected + emojiselected+  emojiselected + emojiselected + emojiselected
+  +  emojiselected + emojiselected + emojiselected+  emojiselected + emojiselected + emojiselected;
  
      var font = document.getElementById("demo1").style.fontSize;
         font++;
