@@ -76,28 +76,78 @@ buttons{
 a{
   text-decoration:none;
 }
+#game{
+  color:#42f5b6;
+  font-size:30px;
+  letter-spacing:5px;
+  margin:10px;
+   transition:0.3s;
+  font-family:roboto;
+   text-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px black, 0 0 50px black, 0 0 50px black;
+}
+#game:hover{
+  letter-spacing:15px;
+  transition:0.3s;
+  text-decoration:underline;
+}
 
   </style>
   </head>
 <body>
-<div class="title">BlueHollowDev</div>
-<div class="title2">Web Developer / Student</div>
+<div class="title"id="title">BlueHollowDev</div>
+<div class="title2"id="title2">Web Developer / Student</div>
 
-<buttons>
+<buttons id="buttons">
 
 <a href="https://dsc.gg/bluehollow"target="_blank"><button class="button"><i class="fa-brands fa-discord"></i></button></a>
  
-<a href="https://codepen.io/HudsonGoodman"target="_blank"> <button class="button"><i class="fa-brands fa-codepen"></i></button>
+<a href="https://codepen.io/HudsonGoodman"target="_blank"> <button class="button"><i class="fa-brands fa-codepen"></i></button></a>
  
-<a href="https://github.com/bluehollowdev"target="_blank"> <button class="button"><i class="fa-brands fa-github-alt"></i></button>
+<a href="https://github.com/bluehollowdev"target="_blank"> <button class="button"><i class="fa-brands fa-github-alt"></i></button></a>
 
 </buttons>
 
 
+<games id="games">
+  
+  <a href="https://bluehollowdev.github.io/tunnel-rush/index.html"><div id="game">tunnel-rush</div></a>
+    <a href="https://bluehollowdev.github.io/devil-cars/index.html">  <div id="game">devil-cars</div></a>
+       <a href="https://bluehollowdev.github.io/doodle-jump/index.html"> <div id="game">doodle-jump</div></a>
+        <a href="https://bluehollowdev.github.io/drift-hunters/index.html">  <div id="game">drift-hunters</div></a>
+           <a href="https://bluehollowdev.github.io/eaglercraft/Offline_Download_Version.html"> <div id="game">eagler-craft</div></a>
+             <a href="https://bluehollowdev.github.io/n-gon/index.html"> <div id="game">n-gon</div></a>
+               <a href="https://bluehollowdev.github.io/planetesimals/index.html"> <div id="game">plane-tesimals</div></a>
+                 <a href="https://bluehollowdev.github.io/sandboxels/index.html"> <div id="game">sand-boxels</div></a>
+  
+  
+</games>
+
+
 <script>
+title = document.getElementById("title");
+title2 = document.getElementById("title2");
+buttons = document.getElementById("buttons");
+games = document.getElementById("games");
 
+games.style.display = "none";
 
+document.addEventListener("keydown", function(event) {
 
+//if 6 key pressed
+    if (event.keyCode === 54) {
+    
+    document.getElementById("title").style.display = "none";
+     document.getElementById("title2").style.display = "none";
+      document.getElementById("buttons").style.display = "none";
+      
+      games.style.display = "inline";
+    
+    }
+
+  
+  
+  
+});
 
 
 </script>
