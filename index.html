@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="secretcode.js"></script>
+<script src="https://bluehollowdev.github.io/secretcode.js"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
  
   <style>
@@ -26,20 +26,9 @@
     flex-direction:column;
   }
 
- button{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-   width:90px;
-   height:90px;
-   background:radial-gradient(black,#242424);
-   border:3px solid #42f5b6;
-   border-radius:100000000000px;
-   margin:30px;
-      transition:1s;
-   box-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px #42f5b6, 0 0 50px black, 0 0 30px black;
+ 
    
- }
+
  #github{
      animation:fadeInUp 1.5s 1;
  }
@@ -50,25 +39,39 @@
  #discord{
       animation:fadeInUp 0.5s 1;
  }
- button:hover{
+ 
+ .contact-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   width:90px;
+   height:90px;
+   background:radial-gradient(black,#242424);
+   border:3px solid #42f5b6;
+   border-radius:100000000000px;
+   margin:30px;
+      transition:0.3s;
+   box-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px #42f5b6, 0 0 50px black, 0 0 30px black;
+   
+ }
+ .contact-button:hover{
     box-shadow: 0 0 3px white, 0 0 10px white, 0 0 20px white, 0 0 50px black, 0 0 30px black;
-   transform:rotate(360deg);
-   border:3px solid white;
-   transition:1s;
-   width:60px;
-   height:60px;
-   margin:40px;
+  
+   border-color:white;
+   transition:0.3s;
    cursor:pointer;
 }
-button:hover .fa-brands{
+.contact-button:hover .fa-brands{
   color:white;
-  transition:1s;
+  transition:0.3s;
+  font-size:40px;
   filter: drop-shadow(0 0 0.75rem white);
 }
 
 
 
  .fa-brands{
+     transition:0.3s;
    color:#42f5b6;
   font-size:30px;
 filter: drop-shadow(0 0 0.75rem #42f5b6);
@@ -102,7 +105,9 @@ buttons{
 }
 a{
   text-decoration:none;
+  
 }
+
 #game{
   color:#42f5b6;
   font-size:30px;
@@ -120,28 +125,32 @@ a{
 .cursor{
   width:300px;
   height:300px;
-  background:radial-gradient(#191919 60%, transparent,transparent,transparent,transparent,transparent,transparent);
+  background:black;
   border-radius:1000000000000px;
   position:absolute;
-  margin:-150px;
   z-index:-100;
-  filter:blur(100);
+  filter:blur(20px);
+  margin:200px;
 }
 
   </style>
   </head>
 <body>
+  
+  
   <div class="cursor"id="cursor"></div>
 <div class="title"id="title">BlueHollowDev</div>
 <div class="title2"id="title2">Web Developer / Student</div>
 
 <buttons id="buttons">
 
-<a href="https://dsc.gg/bluehollow"target="_blank"id="discord"><button class="button"><i class="fa-brands fa-discord"></i></button></a>
+<a href="https://dsc.gg/bluehollow"target="_blank"id="discord"><button class="contact-button"><i class="fa-brands fa-discord"></i></button></a>
  
-<a href="https://codepen.io/HudsonGoodman"target="_blank"id="codepen"> <button class="button"><i class="fa-brands fa-codepen"></i></button></a>
+<a href="https://codepen.io/HudsonGoodman"target="_blank"id="codepen"> <button class="contact-button"><i class="fa-brands fa-codepen"></i></button></a>
  
-<a href="https://github.com/bluehollowdev"target="_blank"id="github"> <button class="button"><i class="fa-brands fa-github-alt"></i></button></a>
+<a href="https://github.com/bluehollowdev"target="_blank"id="github"> <button class="contact-button"><i class="fa-brands fa-github-alt"></i></button></a>
+
+
 
 </buttons>
 
@@ -155,7 +164,7 @@ a{
            <a href="https://bluehollowdev.github.io/eaglercraft/Offline_Download_Version.html"> <div id="game">eagler-craft</div></a>
              <a href="https://bluehollowdev.github.io/n-gon/index.html"> <div id="game">n-gon</div></a>
                <a href="https://bluehollowdev.github.io/planetesimals/index.html"> <div id="game">plane-tesimals</div></a>
-                 <a href="https://bluehollowdev.github.io/sandboxels/index.html"> <div id="game">sand-boxels</div></a>
+                <a href="https://bluehollowdev.github.io/sandboxels/index.html"> <div id="game">sand-boxels</div></a>
   
   
 </games>
@@ -174,8 +183,11 @@ document.addEventListener("mousemove", () => {
   
   let mousex = event.clientX; // Gets Mouse X
   let mousey = event.clientY; // Gets Mouse Y
-  cursor.style.left = mousex + "px";
-  cursor.style.top = mousey + "px";
+  
+  cursor.style.left = "calc(" + mousex + "px" + " / " + "3)";
+  
+  cursor.style.top = "calc(" + mousey + "px" + " / " + "3)";
+
 });
 
 
@@ -211,3 +223,4 @@ document.addEventListener("keydown", function(event) {
 
 </body>
 </html>
+
