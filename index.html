@@ -95,6 +95,7 @@ filter: drop-shadow(0 0 0.75rem #42f5b6);
   margin:10px;
   filter: drop-shadow(0 0 0.75rem #42f5b6);
  }
+
 buttons{
  display:flex;
     justify-content:center;
@@ -179,6 +180,14 @@ games = document.getElementById("games");
 
 games.style.display = "none";
 
+
+
+setTimeout(function(){
+  title2.innerHTML = "I enjoy coding websites, sleeping with my dog, and drawing art.";
+},3000);
+
+
+
 document.addEventListener("mousemove", () => {
   
   let mousex = event.clientX; // Gets Mouse X
@@ -223,4 +232,5 @@ document.addEventListener("keydown", function(event) {
 
 </body>
 </html>
+
 
