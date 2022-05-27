@@ -1,3 +1,4 @@
+
 var Kongregate = Kongregate || {};
 Kongregate.Utils = Kongregate.Utils || {};
 Kongregate.Utils.catchErrors = function(a, b, c) {
