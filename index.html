@@ -150,7 +150,6 @@ a{
              <a href="https://bluehollowdev.github.io/n-gon/index.html"> <div id="game">n-gon</div></a>
                <a href="https://bluehollowdev.github.io/planetesimals/index.html"> <div id="game">plane-tesimals</div></a>
                  <a href="https://bluehollowdev.github.io/sandboxels/index.html"> <div id="game">sand-boxels</div></a>
-      <a href="https://bluehollowdev.github.io/taiko/index.html"> <div id="game">taiko-web</div></a>
   
   
 </games>
@@ -173,10 +172,14 @@ document.addEventListener("mousemove", () => {
   cursor.style.top = mousey + "px";
 });
 
+
+
 document.addEventListener("keydown", function(event) {
 
 //if 6 key pressed
-    if (event.keyCode === 54) {
+  let codeanswer = prompt("code");
+  
+  if(codeanswer === "p!em@n"){
     
     document.getElementById("title").style.display = "none";
      document.getElementById("title2").style.display = "none";
