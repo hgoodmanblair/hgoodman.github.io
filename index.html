@@ -11,12 +11,12 @@
 <script src="https://bluehollowdev.github.io/secretcode.js"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
-  <link href="StyleSheet.css" rel="stylesheet">
+  <link href="personal website xd/StyleSheet.css" rel="stylesheet">
 
  
 
   </head>
-<body>
+<body id="body">
   <div id="invertedcursor"></div>
   
   <div class="cursor"id="cursor"></div>
@@ -24,7 +24,8 @@
   <div class="top-section"id="top-section">
     
 <div class="title"id="title">BlueHollowDev</div>
-<div class="title2"id="title2">Web Developer / Student</div>
+<div class="title2"id="title2">Web Developer / Student </div>
+<div class="status"id="status"><b>Commissions :</b>CLOSED<b> Status :</b>idk</div>
 
 <buttons id="buttons">
 
@@ -83,6 +84,7 @@ Hello, im a self-taught web developer who knows HTML, CSS, and Javascript. I've 
 
 </body>
 <script>
+body =  document.getElementById("body");
   cursor = document.getElementById("cursor");
 invertedcursor = document.getElementById("invertedcursor");
 title = document.getElementById("title");
@@ -92,8 +94,9 @@ games = document.getElementById("games");
 bottomsection = document.getElementById("bottom-section");
 games.style.display = "none";
 bottomsectionarrow = document.getElementById("bottom-section-arrow");
-
-
+status = document.getElementById("status");
+topsection = document.getElementById("top-section");
+bottomsection = document.getElementById("bottom-section");
 
 document.addEventListener("mousemove", () => {
   
@@ -133,12 +136,14 @@ document.addEventListener("keydown", function(event) {
   
   if(codeanswer === secretcode){
     
-    title.style.display = "none";
-    title2.style.display = "none";
-    buttons.style.display = "none";
+   
+    games.style.display = "block";
+     title.style.display = "none";
+       title2.style.display = "none";
+       status.style.display = "none";
+        buttons.style.display = "none";
     bottomsection.style.display = "none";
-    games.style.display = "inline";
-    bottomsectionarrow.style.display = "none";
+
     }
 
   
@@ -151,6 +156,7 @@ document.addEventListener("keydown", function(event) {
 
 </script>
 </html>
+
 
 
 
