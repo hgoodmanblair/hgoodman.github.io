@@ -99,12 +99,22 @@ filter: drop-shadow(0 0 0.75rem  #242424);
   letter-spacing:9px;
   margin:10px;
   filter: drop-shadow(0 0 0.75rem  #e6e6e6);
+  
  }
+ .status{
+   border:3px solid black;
+      font-size:20px;
+         box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
+   color:black;
+   font-family: roboto;
+   padding:15px;
+   border-radius:10px;
+ }
+ 
 
 buttons{
  display:flex;
     justify-content:center;
-    
     align-items:center;
     text-align:center;
     flex-direction:row;
@@ -180,4 +190,17 @@ transition:0.3s;
    font-family: roboto;
   text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
   letter-spacing:5px;
+}
+@media only screen and (max-width: 900px) {
+  #invertedcursor{
+    display:none;
+  }
+  .title{
+    font-size:calc(30px + 2vw);
+    font-family:roboto;
+    font-weight:bold;
+  }
+  .contact-button{
+    margin:30px 10px;
+  }
 }
