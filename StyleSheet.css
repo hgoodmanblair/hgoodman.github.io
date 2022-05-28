@@ -1,158 +1,206 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     <title>BlueHollowDev</title>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="https://bluehollowdev.github.io/aee57063-370x339.png">
-        
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://bluehollowdev.github.io/secretcode.js"></script>
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-  <link href="personal website xd/StyleSheet.css" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+  html {
+  scroll-behavior: smooth;
+}
+  body{
+    background:radial-gradient(white, white);
+    overflow-x:hidden;
+    text-align:center;
+    width:100vw;
+    height:200vh;
+   
+  }
 
  
+   
 
-  </head>
-<body id="body">
-  <div id="invertedcursor"></div>
-  
-  <div class="cursor"id="cursor"></div>
-  
-  <div class="top-section"id="top-section">
-    
-<div class="title"id="title">BlueHollowDev</div>
-<div class="title2"id="title2">Web Developer / Student </div>
-<div class="status"id="status"><b>Commissions :</b>CLOSED<b> Status :</b>idk</div>
+ #github{
+     animation:fadeInUp 1.5s 1;
+ }
+ #codepen{
+      animation:fadeInUp 1s 1;
+ }
 
-<buttons id="buttons">
+ #discord{
+      animation:fadeInUp 0.5s 1;
+ }
+ .top-section{
+    display:flex;
+    margin:-8px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100vw;
+    height:100vh;
+    flex-direction:column;
 
-<a href="https://dsc.gg/bluehollow"target="_blank"id="discord"><button class="contact-button"><i class="fa-brands fa-discord"></i></button></a>
- 
-<a href="https://codepen.io/HudsonGoodman"target="_blank"id="codepen"> <button class="contact-button"><i class="fa-brands fa-codepen"></i></button></a>
- 
-<a href="https://github.com/bluehollowdev"target="_blank"id="github"> <button class="contact-button"><i class="fa-brands fa-github-alt"></i></button></a>
+ }
+  .bottom-section{
+    display:flex;
+    margin:-8px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100vw;
+    height:100vh;
+    flex-direction:column;
 
-
-
-</buttons>
-
-
-<games id="games">
-  
-  <a href="https://bluehollowdev.github.io/tunnel-rush/index.html"><div id="game">tunnel-rush</div></a>
-    <a href="https://bluehollowdev.github.io/devil-cars/index.html">  <div id="game">devil-cars</div></a>
-       <a href="https://bluehollowdev.github.io/doodle-jump/index.html"> <div id="game">doodle-jump</div></a>
-        <a href="https://bluehollowdev.github.io/drift-hunters/index.html">  <div id="game">drift-hunters</div></a>
-           <a href="https://bluehollowdev.github.io/eaglercraft/Offline_Download_Version.html"> <div id="game">eagler-craft</div></a>
-             <a href="https://bluehollowdev.github.io/n-gon/index.html"> <div id="game">n-gon</div></a>
-               <a href="https://bluehollowdev.github.io/planetesimals/index.html"> <div id="game">plane-tesimals</div></a>
-                <a href="https://bluehollowdev.github.io/sandboxels/index.html"> <div id="game">sand-boxels</div></a>
-  
-  
-</games>
-
-
-
-<a href="#bottom-section"><i class="fa-solid fa-arrow-down"id="bottom-section-arrow"></i></a>
-
-
-
-</div>
-
-
-
-
-
-
-  <div class="bottom-section"id="bottom-section">
-
-<a href="#top-section"><i class="fa-solid fa-arrow-down"id="top-section-arrow"></i></a>
-
-
-<div class="bottom-section-p">
-
-  
-Hello, im a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web buetiful.
-
-</div>
-
-</div>
-
-
-</body>
-<script>
-body =  document.getElementById("body");
-  cursor = document.getElementById("cursor");
-invertedcursor = document.getElementById("invertedcursor");
-title = document.getElementById("title");
-title2 = document.getElementById("title2");
-buttons = document.getElementById("buttons");
-games = document.getElementById("games");
-bottomsection = document.getElementById("bottom-section");
-games.style.display = "none";
-bottomsectionarrow = document.getElementById("bottom-section-arrow");
-status = document.getElementById("status");
-topsection = document.getElementById("top-section");
-bottomsection = document.getElementById("bottom-section");
-
-document.addEventListener("mousemove", () => {
-  
-  let mousex = event.clientX; // Gets Mouse X
-  let mousey = event.clientY; // Gets Mouse Y
-  
-  cursor.style.left = "calc(" + mousex + "px" + " / " + "3)";
-  
-  cursor.style.top = "calc(" + mousey + "px" + " / " + "3)";
-  
-
-
-});
-document.body.onmousemove = function(e) {
-  document.documentElement.style.setProperty (
-    '--x', (
-      e.clientX+window.scrollX
-    )
-    + 'px'
-  );
-  document.documentElement.style.setProperty (
-    '--y', (
-      e.clientY+window.scrollY
-    )
-    + 'px'
-  );
+ }
+ .contact-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   width:90px;
+   height:90px;
+   background:transparent;
+   border:3px solid #242424;
+   border-radius:100000000000px;
+   margin:30px;
+      transition:0.3s;
+   box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
+   
+ }
+ .contact-button:hover{
+    box-shadow: 0 0 3px white, 0 0 10px white, 0 0 20px white, 0 0 50px #e6e6e6, 0 0 30px #e6e6e6;
+  background:black;
+   border-color:white;
+   transition:0.3s;
+   cursor:pointer;
+}
+.contact-button:hover .fa-brands{
+  color:white;
+  transition:0.3s;
+  font-size:40px;
+  filter: drop-shadow(0 0 0.75rem white);
 }
 
 
-document.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
-      
 
-//if 6 key pressed
-  let codeanswer = prompt("code");
+ .fa-brands{
+     transition:0.3s;
+   color: black;
+  font-size:30px;
+filter: drop-shadow(0 0 0.75rem  #242424);
   
+ }
+ .title{
+   font-size:100px;
+   color:black;
+  font-family: 'Rubik Glitch', cursive;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+  letter-spacing:8px;
+   animation:fadeInDown 1s 1;
+ }
+  .title2{
+   font-size:20px;
+   color:black;
+   font-family: roboto;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+  letter-spacing:9px;
+  margin:10px;
+  filter: drop-shadow(0 0 0.75rem  #e6e6e6);
   
-  if(codeanswer === secretcode){
-    
-   
-    games.style.display = "block";
-     title.style.display = "none";
-       title2.style.display = "none";
-       status.style.display = "none";
-        buttons.style.display = "none";
-    bottomsection.style.display = "none";
+ }
+ .status{
+   border:3px solid black;
+      font-size:20px;
+         box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
+   color:black;
+   font-family: roboto;
+   padding:15px;
+   border-radius:10px;
+ }
+ 
 
-    }
-
+buttons{
+ display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:row;
+}
+a{
+  text-decoration:none;
   
-  
-    }
-});
+}
 
+#game{
+  color: #242424;
+  font-size:30px;
+  letter-spacing:5px;
+  margin:10px;
+   transition:0.3s;
+  font-family:roboto;
+   text-shadow: 0 0 3px  #242424, 0 0 10px  #242424, 0 0 20px #e6e6e6, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+}
+#game:hover{
+  letter-spacing:15px;
+  transition:0.3s;
+  text-decoration:underline;
+}
+.cursor{
+  width:300px;
+  height:300px;
+  background:#e6e6e6;
+  border-radius:1000000000000px;
+  position:absolute;
+  z-index:-100;
+  filter:blur(20px);
+  margin:200px;
+}
+#invertedcursor {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  filter:blur(10px);
+  mix-blend-mode: difference;
+  transition: transform .2s;
+  pointer-events:none;
+}
 
+.fa-arrow-down{
+  color: black;
+  font-size:30px;
+  filter: drop-shadow(0 0 0.75rem  #242424);
+  margin:20px;
+  cursor:pointer;
+transition:0.3s;
+   animation:fadeInUp 1s 1;
+}
+.fa-arrow-down:hover{
+font-size:35px;
+transition:0.3s;
+}
 
+#top-section-arrow{
+  transform:rotate(180deg);
 
-</script>
-</html>
+}
+
+.bottom-section-p{
+   font-size:20px;
+   color:black;
+   width:80vw;
+   font-family: roboto;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+  letter-spacing:5px;
+}
+@media only screen and (max-width: 900px) {
+  #invertedcursor{
+    display:none;
+  }
+  .title{
+    font-size:calc(30px + 2vw);
+    font-family:roboto;
+    font-weight:bold;
+  }
+  .contact-button{
+    margin:30px 10px;
+  }
+}
