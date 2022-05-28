@@ -158,7 +158,6 @@ a{
   left: var(--x, 0);
   transform: translate(-50%, -50%);
   z-index: 50;
-  filter:blur(10px);
   mix-blend-mode: difference;
   transition: transform .2s;
   pointer-events:none;
