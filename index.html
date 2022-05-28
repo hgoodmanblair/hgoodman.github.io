@@ -12,18 +12,17 @@
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
  
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
-  
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+  html {
+  scroll-behavior: smooth;
+}
   body{
-    background:radial-gradient(#191919, black);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:radial-gradient(white, white);
+    overflow-x:hidden;
     text-align:center;
     width:100vw;
-    height:100vh;
-    overflow:hidden;
-    flex-direction:column;
+    height:200vh;
+   
   }
 
  
@@ -39,24 +38,45 @@
  #discord{
       animation:fadeInUp 0.5s 1;
  }
- 
+ .top-section{
+    display:flex;
+    margin:-8px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100vw;
+    height:100vh;
+    flex-direction:column;
+
+ }
+  .bottom-section{
+    display:flex;
+    margin:-8px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100vw;
+    height:100vh;
+    flex-direction:column;
+
+ }
  .contact-button{
     display:flex;
     justify-content:center;
     align-items:center;
    width:90px;
    height:90px;
-   background:radial-gradient(black,#242424);
-   border:3px solid #42f5b6;
+   background:transparent;
+   border:3px solid #242424;
    border-radius:100000000000px;
    margin:30px;
       transition:0.3s;
-   box-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px #42f5b6, 0 0 50px black, 0 0 30px black;
+   box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
    
  }
  .contact-button:hover{
-    box-shadow: 0 0 3px white, 0 0 10px white, 0 0 20px white, 0 0 50px black, 0 0 30px black;
-  
+    box-shadow: 0 0 3px white, 0 0 10px white, 0 0 20px white, 0 0 50px #e6e6e6, 0 0 30px #e6e6e6;
+  background:black;
    border-color:white;
    transition:0.3s;
    cursor:pointer;
@@ -72,28 +92,27 @@
 
  .fa-brands{
      transition:0.3s;
-   color:#42f5b6;
+   color: black;
   font-size:30px;
-filter: drop-shadow(0 0 0.75rem #42f5b6);
+filter: drop-shadow(0 0 0.75rem  #242424);
   
  }
  .title{
    font-size:100px;
-   color:#42f5b6;
-   font-family: 'Rubik Microbe', cursive;
-  text-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px black, 0 0 50px black, 0 0 50px black;
+   color:black;
+  font-family: 'Rubik Glitch', cursive;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
   letter-spacing:8px;
-  filter: drop-shadow(0 0 0.75rem #42f5b6);
    animation:fadeInDown 1s 1;
  }
   .title2{
    font-size:20px;
-   color:#42f5b6;
+   color:black;
    font-family: roboto;
-  text-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px black, 0 0 50px black, 0 0 50px black;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
   letter-spacing:9px;
   margin:10px;
-  filter: drop-shadow(0 0 0.75rem #42f5b6);
+  filter: drop-shadow(0 0 0.75rem  #e6e6e6);
  }
 
 buttons{
@@ -110,13 +129,13 @@ a{
 }
 
 #game{
-  color:#42f5b6;
+  color: #242424;
   font-size:30px;
   letter-spacing:5px;
   margin:10px;
    transition:0.3s;
   font-family:roboto;
-   text-shadow: 0 0 3px #42f5b6, 0 0 10px #42f5b6, 0 0 20px black, 0 0 50px black, 0 0 50px black;
+   text-shadow: 0 0 3px  #242424, 0 0 10px  #242424, 0 0 20px #e6e6e6, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
 }
 #game:hover{
   letter-spacing:15px;
@@ -126,12 +145,34 @@ a{
 .cursor{
   width:300px;
   height:300px;
-  background:black;
+  background:#e6e6e6;
   border-radius:1000000000000px;
   position:absolute;
   z-index:-100;
   filter:blur(20px);
   margin:200px;
+}
+
+.fa-arrow-down{
+  color: black;
+  font-size:30px;
+  filter: drop-shadow(0 0 0.75rem  #242424);
+  margin:20px;
+  cursor:pointer;
+  transition:0.3s;
+   animation:fadeInUp 1s 1;
+}
+.fa-arrow-down:hover{
+ transition:0.3s;
+  transform:rotate(360deg);
+}
+.bottom-section-p{
+   font-size:20px;
+   color:black;
+   width:80vw;
+   font-family: roboto;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+  letter-spacing:5px;
 }
 
   </style>
@@ -140,6 +181,9 @@ a{
   
   
   <div class="cursor"id="cursor"></div>
+  
+  <div class="top-section"id="top-section">
+    
 <div class="title"id="title">BlueHollowDev</div>
 <div class="title2"id="title2">Web Developer / Student</div>
 
@@ -171,6 +215,32 @@ a{
 </games>
 
 
+
+<a href="#bottom-section"><i class="fa-solid fa-arrow-down"></i></a>
+
+
+
+</div>
+
+
+
+
+
+
+  <div class="bottom-section"id="bottom-section">
+
+
+<div class="bottom-section-p">
+<p>
+  
+Hello, im a self-taught web developer who is fluent in HTML & CSS, who is also learning Javascript. I've worked with various companies to make their appearence on the web buetiful.
+
+</p>
+</div>
+
+</div>
+
+
 <script>
 cursor = document.getElementById("cursor");
 title = document.getElementById("title");
@@ -180,11 +250,6 @@ games = document.getElementById("games");
 
 games.style.display = "none";
 
-
-
-setTimeout(function(){
-  title2.innerHTML = "I enjoy coding websites, sleeping with my dog, and drawing art.";
-},3000);
 
 
 
@@ -232,5 +297,6 @@ document.addEventListener("keydown", function(event) {
 
 </body>
 </html>
+
 
 
