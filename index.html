@@ -216,7 +216,7 @@ a{
 
 
 
-<a href="#bottom-section"><i class="fa-solid fa-arrow-down"></i></a>
+<a href="#bottom-section"><i class="fa-solid fa-arrow-down"id="bottom-section-arrow"></i></a>
 
 
 
@@ -247,9 +247,9 @@ title = document.getElementById("title");
 title2 = document.getElementById("title2");
 buttons = document.getElementById("buttons");
 games = document.getElementById("games");
-
+bottomsection = document.getElementById("bottom-section");
 games.style.display = "none";
-
+bottomsectionarrow = document.getElementById("bottom-section-arrow");
 
 
 
@@ -276,12 +276,12 @@ document.addEventListener("keydown", function(event) {
   
   if(codeanswer === secretcode){
     
-    document.getElementById("title").style.display = "none";
-     document.getElementById("title2").style.display = "none";
-      document.getElementById("buttons").style.display = "none";
-      
-      games.style.display = "inline";
-    
+    title.style.display = "none";
+    title2.style.display = "none";
+    buttons.style.display = "none";
+    bottomsection.style.display = "none";
+    games.style.display = "inline";
+    bottomsectionarrow.style.display = "none";
     }
 
   
@@ -297,6 +297,7 @@ document.addEventListener("keydown", function(event) {
 
 </body>
 </html>
+
 
 
 
