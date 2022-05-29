@@ -5,7 +5,7 @@
   scroll-behavior: smooth;
 }
   body{
-    background:radial-gradient(white, white);
+    background:radial-gradient(white, lightgrey);
     overflow-x:hidden;
     text-align:center;
     width:100vw;
@@ -87,19 +87,26 @@ filter: drop-shadow(0 0 0.75rem  #242424);
  }
  .title{
    font-size:100px;
-   color:black;
+
   font-family: 'Rubik Glitch', cursive;
-  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6, 0 0 20px #e6e6e6, 0 0 30px #e6e6e6,
+  30px 30px 0px lightgrey;
   letter-spacing:8px;
    animation:fadeInDown 1s 1;
+       -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+
  }
+
   .title2{
    font-size:20px;
+   animation:fadeIn 2s 1;
    color:black;
    font-family: roboto;
   text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
   letter-spacing:9px;
-  margin:10px;
+  margin:20px;
   filter: drop-shadow(0 0 0.75rem  #e6e6e6);
   
  }
@@ -158,7 +165,6 @@ width:50px;
 height:50px;
 border-radius:50%;
   transition:0.3s;
- background:white;
 
  box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
 }
@@ -168,7 +174,9 @@ border-radius:50%;
    border-color:white;
    transition:0.3s;
    cursor:pointer;
+
 }
+
 .modeb:hover .fa-moon{
   color:white;
     transition:0.3s;
@@ -183,7 +191,7 @@ filter: drop-shadow(0 0 0.75rem  #242424);
 }
 .statusandmode{
 display:flex;
-
+animation:fadeIn 2s 1;
    justify-content:center;
    align-items:center;
    text-align:center;
@@ -202,7 +210,7 @@ display:flex;
   pointer-events:none;
 }
 
-.fa-arrow-down{
+.fa-caret-up, .fa-caret-down{
   color: black;
   font-size:30px;
   filter: drop-shadow(0 0 0.75rem  #242424);
@@ -211,15 +219,11 @@ display:flex;
 transition:0.3s;
    animation:fadeInUp 1s 1;
 }
-.fa-arrow-down:hover{
+.fa-caret-up, .fa-caret-down:hover{
 font-size:35px;
 transition:0.3s;
 }
 
-#top-section-arrow{
-  transform:rotate(180deg);
-
-}
 
 .bottom-section-p{
    font-size:20px;
