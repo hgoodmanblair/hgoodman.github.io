@@ -24,7 +24,7 @@
   <div class="top-section"id="top-section">
     
 <div class="title"id="title">BlueHollowDev</div>
-<div class="title2"id="title2">Web Developer / Student </div>
+<div class="title2"id="title2">Programmer / Student </div>
 
 <div class="statusandmode"id="statusandmode">
 <div class="status"id="status"><b>Commissions: </b>CLOSED</div>
@@ -63,10 +63,6 @@
 
 
 
-<a href="#bottom-section"><i class="fa-solid fa-caret-down"id="bottom-section-arrow"></i></a>
-
-
-
 </div>
 
 
@@ -76,13 +72,12 @@
 
   <div class="bottom-section"id="bottom-section">
 
-<a href="#top-section"><i class="fa-solid fa-caret-up"id="top-section-arrow"></i></a>
 
 
 <div class="bottom-section-p">
 
   
-Hello, Im Bluehollowdev, a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web beautiful.
+  Hello, Im BlueHollow, a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web beautiful.
 
 </div>
 
@@ -108,7 +103,8 @@ darkmodeb = document.getElementById("darkmodeb");
 lightmodeb = document.getElementById("lightmodeb");
 statusandmode = document.getElementById("statusandmode");
 
-lightmodeb.style.display = "none";
+darkmodeb.style.display = "none";
+
 document.addEventListener("mousemove", () => {
   
   let mousex = event.pageX; // Gets Mouse X
@@ -155,14 +151,14 @@ bottomsectionarrow.style.display = "none";
 
  darkmodeb.addEventListener('click', function (event) {
  
-   invertedpage.style.display = "block";
+   invertedpage.style.opacity = "100%";
     darkmodeb.style.display = "none";
     lightmodeb.style.display = "block";
   
  });
  lightmodeb.addEventListener('click', function (event) {
  
-   invertedpage.style.display = "none";
+   invertedpage.style.opacity = "0%";
     darkmodeb.style.display = "block";
     lightmodeb.style.display = "none";
   
@@ -172,8 +168,6 @@ bottomsectionarrow.style.display = "none";
 
 </script>
 </html>
-
-
 
 
 
