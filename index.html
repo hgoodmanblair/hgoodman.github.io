@@ -11,13 +11,13 @@
 <script src="https://bluehollowdev.github.io/secretcode.js"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
-  <link href="StyleSheet.css" rel="stylesheet">
+  <link href="personal website xd/StyleSheet.css" rel="stylesheet">
 
  
 
   </head>
 <body id="body">
-  <div id="invertedcursor"></div>
+  <div id="invertedpage"></div>
   
   <div class="cursor"id="cursor"></div>
   
@@ -25,7 +25,14 @@
     
 <div class="title"id="title">BlueHollowDev</div>
 <div class="title2"id="title2">Web Developer / Student </div>
-<div class="status"id="status"><b>Commissions :</b>CLOSED<b> Status :</b>idk</div>
+
+<div class="statusandmode">
+<div class="status"id="status"><b>Commissions: </b>CLOSED</div>
+<button id="darkmodeb"class="modeb"><i class="fa-solid fa-sun"></i></button>
+<button id="lightmodeb"class="modeb"><i class="fa-solid fa-moon"></i></button>
+</div>
+
+
 
 <buttons id="buttons">
 
@@ -75,7 +82,7 @@
 <div class="bottom-section-p">
 
   
-Hello, im a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web buetiful.
+Hello, im a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web beautiful.
 
 </div>
 
@@ -86,7 +93,7 @@ Hello, im a self-taught web developer who knows HTML, CSS, and Javascript. I've 
 <script>
 body =  document.getElementById("body");
   cursor = document.getElementById("cursor");
-invertedcursor = document.getElementById("invertedcursor");
+invertedpage = document.getElementById("invertedpage");
 title = document.getElementById("title");
 title2 = document.getElementById("title2");
 buttons = document.getElementById("buttons");
@@ -97,11 +104,14 @@ bottomsectionarrow = document.getElementById("bottom-section-arrow");
 status = document.getElementById("status");
 topsection = document.getElementById("top-section");
 bottomsection = document.getElementById("bottom-section");
+darkmodeb = document.getElementById("darkmodeb");
+lightmodeb = document.getElementById("lightmodeb");
 
+lightmodeb.style.display = "none";
 document.addEventListener("mousemove", () => {
   
-  let mousex = event.clientX; // Gets Mouse X
-  let mousey = event.clientY; // Gets Mouse Y
+  let mousex = event.pageX; // Gets Mouse X
+  let mousey = event.pageY; // Gets Mouse Y
   
   cursor.style.left = "calc(" + mousex + "px" + " / " + "3)";
   
@@ -110,21 +120,8 @@ document.addEventListener("mousemove", () => {
 
 
 });
-document.body.onmousemove = function(e) {
-  document.documentElement.style.setProperty (
-    '--x', (
-      e.clientX+window.scrollX
-    )
-    + 'px'
-  );
-  document.documentElement.style.setProperty (
-    '--y', (
-      e.clientY+window.scrollY
-    )
-    + 'px'
-  );
-}
 
+ 
 
 document.addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
@@ -151,6 +148,22 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+
+
+ darkmodeb.addEventListener('click', function (event) {
+ 
+   invertedpage.style.display = "block";
+    darkmodeb.style.display = "none";
+    lightmodeb.style.display = "block";
+  
+ });
+ lightmodeb.addEventListener('click', function (event) {
+ 
+   invertedpage.style.display = "none";
+    darkmodeb.style.display = "block";
+    lightmodeb.style.display = "none";
+  
+ });
 
 
 
