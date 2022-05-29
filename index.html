@@ -11,7 +11,7 @@
 <script src="https://bluehollowdev.github.io/secretcode.js"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
-  <link href="StyleSheet.css" rel="stylesheet">
+  <link href="personal website xd/StyleSheet.css" rel="stylesheet">
 
  
 
@@ -26,7 +26,7 @@
 <div class="title"id="title">BlueHollowDev</div>
 <div class="title2"id="title2">Web Developer / Student </div>
 
-<div class="statusandmode">
+<div class="statusandmode"id="statusandmode">
 <div class="status"id="status"><b>Commissions: </b>CLOSED</div>
 <button id="darkmodeb"class="modeb"><i class="fa-solid fa-sun"></i></button>
 <button id="lightmodeb"class="modeb"><i class="fa-solid fa-moon"></i></button>
@@ -63,7 +63,7 @@
 
 
 
-<a href="#bottom-section"><i class="fa-solid fa-arrow-down"id="bottom-section-arrow"></i></a>
+<a href="#bottom-section"><i class="fa-solid fa-caret-down"id="bottom-section-arrow"></i></a>
 
 
 
@@ -76,13 +76,13 @@
 
   <div class="bottom-section"id="bottom-section">
 
-<a href="#top-section"><i class="fa-solid fa-arrow-down"id="top-section-arrow"></i></a>
+<a href="#top-section"><i class="fa-solid fa-caret-up"id="top-section-arrow"></i></a>
 
 
 <div class="bottom-section-p">
 
   
-Hello, im a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web beautiful.
+Hello, Im Bluehollowdev, a self-taught web developer who knows HTML, CSS, and Javascript. I've worked with various companies to make their appearence on the web beautiful.
 
 </div>
 
@@ -106,6 +106,7 @@ topsection = document.getElementById("top-section");
 bottomsection = document.getElementById("bottom-section");
 darkmodeb = document.getElementById("darkmodeb");
 lightmodeb = document.getElementById("lightmodeb");
+statusandmode = document.getElementById("statusandmode");
 
 lightmodeb.style.display = "none";
 document.addEventListener("mousemove", () => {
@@ -137,9 +138,11 @@ document.addEventListener("keydown", function(event) {
     games.style.display = "block";
      title.style.display = "none";
        title2.style.display = "none";
-       status.style.display = "none";
+       statusandmode.style.display = "none";
         buttons.style.display = "none";
     bottomsection.style.display = "none";
+body.style.height = "100vh";
+bottomsectionarrow.style.display = "none";
 
     }
 
@@ -169,6 +172,7 @@ document.addEventListener("keydown", function(event) {
 
 </script>
 </html>
+
 
 
 
