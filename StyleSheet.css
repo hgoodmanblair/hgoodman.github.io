@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
   html {
   scroll-behavior: smooth;
 }
   body{
-    background:radial-gradient(white, lightgrey);
+    background:#f0f0f0;
     overflow-x:hidden;
     text-align:center;
     width:100vw;
-    height:200vh;
+  
 
   }
 
@@ -46,6 +47,7 @@
     width:100vw;
     height:100vh;
     flex-direction:column;
+    background:white;
 
  }
  .contact-button{
@@ -88,14 +90,13 @@ filter: drop-shadow(0 0 0.75rem  #242424);
  .title{
    font-size:100px;
 
-  font-family: 'Rubik Glitch', cursive;
+ font-family: 'Russo One', sans-serif;
+ font-weight:bold;
   text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6, 0 0 20px #e6e6e6, 0 0 30px #e6e6e6,
   30px 30px 0px lightgrey;
   letter-spacing:8px;
    animation:fadeInDown 1s 1;
-       -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+   color:black;
 
  }
 
@@ -198,10 +199,11 @@ animation:fadeIn 2s 1;
    flex-direction:row;
 }
 #invertedpage {
-  display:none;
+  display:block;
+  transition:1s;
   position:absolute;
   width: 100vw;
-  height: 205vh;
+  height: 200vh;
   background: #fff;
   border-radius: 0%;
   margin:-8px;
@@ -234,15 +236,16 @@ transition:0.3s;
   letter-spacing:5px;
 }
 @media only screen and (max-width: 900px) {
-  #invertedcursor{
-    display:none;
-  }
+
   .title{
     font-size:calc(30px + 2vw);
     font-family:roboto;
     font-weight:bold;
+    text-shadow:none;
+
   }
   .contact-button{
     margin:30px 10px;
+    
   }
 }
