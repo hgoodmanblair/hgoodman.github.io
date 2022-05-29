@@ -10,7 +10,7 @@
     text-align:center;
     width:100vw;
     height:200vh;
-   
+
   }
 
  
@@ -150,18 +150,55 @@ a{
   filter:blur(20px);
   margin:200px;
 }
-#invertedcursor {
-  position: absolute;
-  width: 200px;
-  height: 200px;
+.modeb{
+ margin:0px 10px;
+ border:3px solid black;
+ border-radius: 5px;
+width:50px;
+height:50px;
+border-radius:50%;
+  transition:0.3s;
+ background:white;
+
+ box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
+}
+.modeb:hover{
+   box-shadow: 0 0 3px white, 0 0 10px white, 0 0 20px white, 0 0 50px #e6e6e6, 0 0 30px #e6e6e6;
+  background:black;
+   border-color:white;
+   transition:0.3s;
+   cursor:pointer;
+}
+.modeb:hover .fa-moon{
+  color:white;
+    transition:0.3s;
+      font-size:20px;
+filter: drop-shadow(0 0 0.75rem  #242424);
+}
+.modeb:hover .fa-sun{
+  color:white;
+    transition:0.3s;
+      font-size:20px;
+filter: drop-shadow(0 0 0.75rem  #242424);
+}
+.statusandmode{
+display:flex;
+
+   justify-content:center;
+   align-items:center;
+   text-align:center;
+   flex-direction:row;
+}
+#invertedpage {
+  display:none;
+  position:absolute;
+  width: 100vw;
+  height: 205vh;
   background: #fff;
-  border-radius: 50%;
-  top: var(--y, 0);
-  left: var(--x, 0);
-  transform: translate(-50%, -50%);
+  border-radius: 0%;
+  margin:-8px;
   z-index: 50;
   mix-blend-mode: difference;
-  transition: transform .2s;
   pointer-events:none;
 }
 
