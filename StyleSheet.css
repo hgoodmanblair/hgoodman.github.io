@@ -15,7 +15,9 @@
   }
 
  
-   
+   #spotify{
+      animation:fadeInUp 2s 1;
+   }
 
  #github{
      animation:fadeInUp 1.5s 1;
@@ -208,7 +210,7 @@ animation:fadeIn 2s 1;
    flex-direction:row;
 }
 #invertedpage {
-  display:block;
+  opacity:0%;
   transition:1s;
   position:fixed;
   width: 100vw;
@@ -356,10 +358,14 @@ margin:-8px;
 @media only screen and (max-width: 900px) {
 
   .title{
-    font-size:calc(30px + 2vw);
+    font-size:40px;
+    width:100vw;
     font-weight:bold;
     text-shadow:none;
-
+display:flex;
+  justify-content:center;
+  text-align:center;
+  align-items:center;
   }
   .contact-button{
     margin:30px 10px;
@@ -384,9 +390,12 @@ margin:-8px;
   }
   .about-left-section{
     width:90%;
+    height:auto;
+    margin:20px 0px;
   }
   .about-right-section{
-   width:90%;
+   width:100%;
+   height:max;
   }
   .footer-empty-side{
   width:0%;
@@ -401,7 +410,11 @@ margin:-8px;
   height:100%;
 }
 .about-img{
-  width:70%;
+  width:50%;
+  height:70%;
+}
+#spotify{
+  display:none;
 }
 
 }
