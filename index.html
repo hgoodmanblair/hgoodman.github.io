@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://bluehollowdev.github.io/secretcode.js"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
   <link href="StyleSheet.css" rel="stylesheet">
@@ -17,11 +16,16 @@
 
   </head>
 <body id="body">
+
+  <audio src="https://bluehollowdev.github.io/images/Morning-Routine-Lofi-Study-Music.mp3"></audio>
+  
+
+  
   <div id="invertedpage"></div>
   
   <div class="cursor"id="cursor"></div>
   
-  <div class="section"style="background:#f0f0f0;">
+  <div class="section"style="background:#f0f0f0;"id="section">
     
 <div class="title"id="title">BlueHollowDev</div>
 <div class="title2"id="title2">Programmer / Student </div>
@@ -50,21 +54,6 @@
 </buttons>
 
 
-<games id="games">
-  
-  <a href="https://bluehollowdev.github.io/tunnel-rush/index.html"><div id="game">tunnel-rush</div></a>
-    <a href="https://bluehollowdev.github.io/devil-cars/index.html">  <div id="game">devil-cars</div></a>
-       <a href="https://bluehollowdev.github.io/doodle-jump/index.html"> <div id="game">doodle-jump</div></a>
-        <a href="https://bluehollowdev.github.io/drift-hunters/index.html">  <div id="game">drift-hunters</div></a>
-           <a href="https://bluehollowdev.github.io/eaglercraft/Offline_Download_Version.html"> <div id="game">eagler-craft</div></a>
-             <a href="https://bluehollowdev.github.io/n-gon/index.html"> <div id="game">n-gon</div></a>
-               <a href="https://bluehollowdev.github.io/planetesimals/index.html"> <div id="game">plane-tesimals</div></a>
-                <a href="https://bluehollowdev.github.io/sandboxels/index.html"> <div id="game">sand-boxels</div></a>
-  
-  
-</games>
-
-
 
 </div>
 
@@ -73,7 +62,7 @@
 
 
 
-  <div class="section"style="background:white;flex-direction:row;">
+  <div class="section"style="background:white;flex-direction:row;"id="section">
 
 
 <div class="about-left-section">
@@ -89,7 +78,7 @@
 
 
 <div class="about-right-section">
-<img src="images/IMG_20220507_095645.jpg"class="about-img">
+<img src="file:///home/chronos/u-e0c85b26c3bbb9fb6a584342623323421a92b928/MyFiles/Camera/IMG_20220507_095645.jpg"class="about-img">
 </div>
 
 </div>
@@ -104,7 +93,7 @@
       
 <div class="portfolio-item">
   
-<img src="images/Screenshot 2022-05-29 9.07.03 PM.png" class="portfolio-image">
+<img src="file:///home/chronos/u-e0c85b26c3bbb9fb6a584342623323421a92b928/MyFiles/Downloads/Screenshot%202022-05-29%209.07.03%20PM.png" class="portfolio-image">
   
 <a href="https://awes0mestudios.com"target="_blank"><div class="portfolio-item-title"><p>Awes0meStudios.com</p></div></a>
 </div>
@@ -136,47 +125,18 @@ invertedpage = document.getElementById("invertedpage");
 title = document.getElementById("title");
 title2 = document.getElementById("title2");
 buttons = document.getElementById("buttons");
-games = document.getElementById("games");
 
-games.style.display = "none";
 
 status = document.getElementById("status");
 darkmodeb = document.getElementById("darkmodeb");
 lightmodeb = document.getElementById("lightmodeb");
 statusandmode = document.getElementById("statusandmode");
-
+section = document.getElementById("section");
 darkmodeb.style.display = "none";
 
 
 
-document.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
-      
-
-//if 6 key pressed
-  let codeanswer = prompt("code");
-  
-  
-  if(codeanswer === secretcode){
     
-   
-    games.style.display = "block";
-     title.style.display = "none";
-       title2.style.display = "none";
-       statusandmode.style.display = "none";
-        buttons.style.display = "none";
-    bottomsection.style.display = "none";
-body.style.height = "100vh";
-bottomsectionarrow.style.display = "none";
-
-    }
-
-  
-  
-    }
-});
-
-
 
  darkmodeb.addEventListener('click', function (event) {
  
@@ -197,6 +157,5 @@ bottomsectionarrow.style.display = "none";
 
 </script>
 </html>
-
 
 
