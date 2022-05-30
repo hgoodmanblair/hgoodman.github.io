@@ -96,6 +96,16 @@ margin:10px 0px;
    animation:fadeInDown 1s 1;
    color:black;
  }
+ .section-description{
+      font-size:20px;
+   color:black;
+   width:80vw;
+   font-family: roboto;
+  text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
+  letter-spacing:5px;
+   animation:fadeInDown 1s 1;
+
+ }
 
   .title2{
    font-size:20px;
