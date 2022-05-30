@@ -30,7 +30,7 @@
   
   <div class="section"style="background:#f0f0f0;"id="section">
     
-<div class="title"id="title">BlueHollowDev</div>
+<div class="title"id="title"><p>BlueHollowDev</p></div>
 <div class="title2"id="title2">Programmer / Student </div>
 
 <div class="statusandmode"id="statusandmode">
@@ -49,7 +49,7 @@
  
 <a href="https://github.com/bluehollowdev"target="_blank"id="github"> <button class="contact-button"><i class="fa-brands fa-github-alt"></i></button></a>
 
-<a href="https://open.spotify.com/user/mrrav9h3cri19c9cjw7g47pn9"target="_blank"id="github"> <button class="contact-button">
+<a href="https://open.spotify.com/user/mrrav9h3cri19c9cjw7g47pn9"target="_blank"id="spotify"> <button class="contact-button">
 <i class="fa-brands fa-spotify"></i></button></a>
 
 
@@ -81,7 +81,7 @@
 
 
 <div class="about-right-section">
-<img src="images/IMG_20220507_095645.jpg"class="about-img">
+<img src="file:///home/chronos/u-e0c85b26c3bbb9fb6a584342623323421a92b928/MyFiles/Camera/IMG_20220507_095645.jpg"class="about-img">
 </div>
 
 </div>
@@ -96,7 +96,7 @@
       
 <div class="portfolio-item">
   
-<img src="images/Screenshot 2022-05-29 9.07.03 PM.png" class="portfolio-image">
+<img src="file:///home/chronos/u-e0c85b26c3bbb9fb6a584342623323421a92b928/MyFiles/Downloads/Screenshot%202022-05-29%209.07.03%20PM.png" class="portfolio-image">
   
 <a href="https://awes0mestudios.com"target="_blank"><div class="portfolio-item-title"><p>Awes0meStudios.com</p></div></a>
 </div>
@@ -142,10 +142,9 @@ darkmodeb = document.getElementById("darkmodeb");
 lightmodeb = document.getElementById("lightmodeb");
 statusandmode = document.getElementById("statusandmode");
 section = document.getElementById("section");
-darkmodeb.style.display = "none";
+darkmodeb.style.display = "block";
 
-
-
+lightmodeb.style.display = "none";
     
 
  darkmodeb.addEventListener('click', function (event) {
@@ -155,6 +154,7 @@ darkmodeb.style.display = "none";
     lightmodeb.style.display = "block";
   
  });
+ 
  lightmodeb.addEventListener('click', function (event) {
  
    invertedpage.style.opacity = "0%";
@@ -167,4 +167,3 @@ darkmodeb.style.display = "none";
 
 </script>
 </html>
-
