@@ -13,11 +13,11 @@
    overflow-x:hidden;
 
   }
-.iframe-background{
+#canvas3dd{
   width:100vw;
   height:100vh;
   position:absolute;
-  
+pointer-events:all;
 }
 
  
@@ -102,6 +102,7 @@ filter: drop-shadow(0 0 0.75rem  #242424);
  .title{
    font-size:100px;
    display:flex;
+   pointer-events: none;
     justify-content:center;
     align-items:center;
 z-index:5;
@@ -139,6 +140,7 @@ margin:10px 0px;
    animation:fadeIn 2s 1;
    color:black;
    z-index:5;
+   pointer-events: none;
    font-family: roboto;
   text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
   letter-spacing:9px;
@@ -147,6 +149,7 @@ margin:10px 0px;
   
  }
  .status{
+     pointer-events: none;
    border:3px solid black;
       font-size:20px;
          box-shadow: 0 0 1px  #242424, 0 0 2px  #242424, 0 0 5px  #242424, 0 0 50px #e6e6e6, 0 0 7px #e6e6e6;
