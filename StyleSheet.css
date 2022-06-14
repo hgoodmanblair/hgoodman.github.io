@@ -17,7 +17,6 @@
   width:100vw;
   height:100vh;
   position:absolute;
-pointer-events:all;
 }
 
  
@@ -336,8 +335,12 @@ height:50%;
   text-shadow: 0 0 3px  #e6e6e6, 0 0 10px  #e6e6e6, 0 0 20px #e6e6e6k, 0 0 50px #e6e6e6, 0 0 50px #e6e6e6;
   letter-spacing:5px;
 }
+.portfolio-item-href{
+  width:100%;
+  margin:-8px;
+}
 .portfolio-item-title > p{
-  margin:0px 20px;
+  margin:10px;
 }
 .portfolio-item-title > p:hover{
   text-decoration:underline;
