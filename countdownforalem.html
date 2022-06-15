@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AdoptVille Countdown</title>
+    
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    </head>
+    <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+      
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      
+     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+      
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+      
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:100vw;
+      height:100vh;
+      background:lightgrey;
+      overflow:hidden;
+background-image:url("file:///home/chronos/u-e0c85b26c3bbb9fb6a584342623323421a92b928/MyFiles/awesome%20studios%20freelance%20project/adoptville2.png");
+  -webkit-background-size: cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      
+    }
+    .box{
+      width:40vw;
+      height:80vh;
+      background:white;
+      border-radius:10%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      flex-direction:column;
+    }
+    .title{
+     font-family: 'Luckiest Guy', cursive;
+     color:#ffaf5e;
+     font-size:70px;
+    }
+    .description{
+      margin:10px 0px;
+      color:grey;
+      letter-spacing:1.2px;
+      font-family:roboto;
+      font-size:17px;
+    }
+    titles{
+      width:80%;
+    }
+    buttons{
+      width:80%;
+      margin-bottom:30px;
+      margin-top:5px;
+    }
+    button{
+      background:#ed556c;
+      border:none;
+      border-radius:10px;
+     width:35%;
+     padding:13px;
+      color:white;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+       letter-spacing:1.4px;
+      font-family:roboto;
+      font-size:17px;
+      margin-right:10px;
+    }
+    hr{
+      width:80%;
+      border:2px solid #242424;
+      background:#242424;
+      margin:0px;
+    }
+    .numbercontainer{
+      margin:20px 0px;
+       display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+    }
+       .countdown{
+      font-family: 'Inter', sans-serif;
+      font-weight:thin;
+     color:#242424;
+     font-size:50px;
+     display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:row;
+    }
+    .number{
+      margin:20px;
+    }
+    .numberlabel{
+       font-family: 'Inter', sans-serif;
+      font-weight:thin;
+     color:#242424;
+     font-size:20px;
+    }
+    socials{
+            display:flex;
+      flex-direction:row;
+       width:80%;
+      height:20%;
+    }
+    .fa-brands{
+             display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#12c2e6;
+      font-size:30px;
+      margin-right:20px;
+        height:100%;
+    }
+    #robloxicon{
+      height:100%;
+      margin-right:20px;
+    }
+    
+   @media only screen and (max-width:950px) {
+     
+    .box{
+    width:70vw;
+    }
+   }
+    @media only screen and (max-width:600px) {
+      .box{
+        width:90vw;
+      }
+      
+    }
+    a{
+      text-decoration:none;
+    }
+
+      
+      
+      
+    </style>
+  <body>
+    
+    <div class="box">
+      
+      
+      <titles>
+      <div class="title">AdoptVille</div>
+      <div class="description">Marville-lous adventures await, fearless adventurers!</div>
+      </titles>
+      
+      <buttons>
+        
+<a href="https://docs.google.com/document/d/1ul74nYT_c8pD6juqekuwdy61Ifabpv_83A9wnHIojCs/edit"target="_blank">
+  <button>About</button></a>
+       
+<a href="https://devforum.roblox.com/t/adoptville-about-and-update-log/1834811"target="_blank">
+  <button>Developers</button></a>
+  
+      </buttons>
+      
+      <hr>
+      
+      <div class="countdown">
+
+<div class="numbercontainer"><div id="days"class="number"></div><div class="numberlabel">Days</div></div>
+        
+<div class="numbercontainer"> <div id="hours"class="number"></div><div class="numberlabel">Hrs</div></div>
+       
+<div class="numbercontainer"><div id="minutes"class="number"></div><div class="numberlabel">Mins</div></div>
+             
+ <div class="numbercontainer"><div id="seconds"class="number"></div><div class="numberlabel">Secs</div></div>
+               
+      </div>
+      
+      <script>
+        // Set the date we're counting down to
+var countDownDate = new Date("July 15, 2022 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("days").innerHTML = days;
+   document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+         document.getElementById("seconds").innerHTML = seconds;
+    
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "The Game Has Been Released!Jump in and explore!";
+  }
+}, 1000);
+      </script>
+      <hr>
+      
+      <socials>
+        
+<a href="https://twitter.com/studios_fronpag"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        
+<a href="https://discord.com/invite/Uuuqr3K6"target="_blank"><i class="fa-brands fa-discord"></i></a>
+        
+<a href="https://web.roblox.com/groups/3886409/FrontPage#!/about"target="_blank"><span class="iconify"id="robloxicon" data-icon="simple-icons:roblox" style="color: #12c2e6;font-size:30px;"></span></a>
+        
+        
+      </socials>
+      
+      
+      
+    </div>
+    
+    
+    
+    
+  </body>
+</html>
