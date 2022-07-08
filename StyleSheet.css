@@ -13,12 +13,6 @@
    overflow-x:hidden;
 
   }
-#canvas3dd{
-  width:100vw;
-  height:100vh;
-  position:absolute;
-}
-
  
    #spotify{
       animation:fadeInUp 2s 1;
