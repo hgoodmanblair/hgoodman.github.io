@@ -1,5 +1,4 @@
-
-      }<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>party.games</title>
@@ -18,6 +17,7 @@
         align-items:center;
         flex-direction:column;
       }
+      
       .title{
         background: -webkit-linear-gradient(0deg,red,orange,yellow,green,blue,cyan);
   -webkit-background-clip: text;
@@ -111,7 +111,7 @@
         <h1>🎉</h1>
       </div>
       
-      
+      <container id="container">
       <div class="header-container">
       <h1 class="title">Party.Games🎉</h1>
       <h2 class="subtitle">Awesome party games for you and your friends!</h2>
@@ -121,24 +121,30 @@
         
 <div class="game"><div class="gametitle"><a href="partygames/russianroulette.html">Russian Roulette!</a></div></div>
       
-      <div class="game"><div class="gametitle">Pictionary!</div></div>
+        <div class="game"><div class="gametitle"><a href="partygames/headbands.html">Headbands!</a></div></div>
       
       <div class="game"><div class="gametitle">Truth Or Dare!</div></div>
+        
+          <div class="game"><div class="gametitle">Two Truths And A Lie!</div></div>
       
       </div>
       
       
-      
+      </container>
     </body>
     <script>
       var loadingscreen = document.getElementById("loadingscreen");
       var body = document.getElementById("body");
       
+      var container = document.getElementById("container");
+      
       function start(){
         loadingscreen.style.display = "flex";
+        container.style.display = "none";
         
         setTimeout(function(){
             loadingscreen.style.display = "none";
+                    container.style.display = "inline";
         }, 2000);
       }
     </script>
