@@ -4,12 +4,12 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       var thingname = document.getElementById("thingname");
-      
-      
+     
+     
       var stuff = ["Mickey Mouse", "Donald Duck","Elsa","Goofy","Snow White","Merida","Stich","Anna","Woody","Grogu","Captain Hook","Simba","Buzz Lightyear","Winnie-The-Poo","Olaf","Cinderella","Mulan","Pocahontas","Tinker-Bell","Snickers","Jolly Ranchers","Dum Dum's","Laughy Taffy","Hershey Kiss","Milky Way's","M&M's","Smarties's","Candy Canes","100 Grand","Ring Pop","Butter Finger","Crunch Bar","War Head","Starburst","Skittles","duck","koala","cow","goose","sheep","crow","chicken","cockroach","gorilla","bear","lizard","moose","deer","shark","tuna","butterfly","horse","dog","lion","tiger","Fox","jellyfish","bee","squid","starfish","Zebra","panda","frog","ant","snake","scorpian","Whale","geraff","carrot","pickle","toast","banana","rice","cake","icecream","green beans","rice","grapes","chicken","cucumber","cookies","cheese","popcorn","crackers","potato chips"];
-      
+     
 
-      
+     
       function generate(){
         var randomname = stuff[Math.floor(Math.random() * stuff.length)];
       document.getElementById("thingname").innerHTML = randomname;
@@ -40,8 +40,9 @@
         padding:20px;
         font-size:30px;
         color:white;
-           font-family: 'Quicksand', sans-serif;
-           background:#242424
+ font-family: 'Quicksand', sans-serif;
+ background:#242424;
+ box-shadow: -0.6vh 0.6vw red;
       }
       .generateb:hover{
         background:#191919;
@@ -59,8 +60,13 @@
   -webkit-text-fill-color: transparent;
         font-size:calc(20px + 10vw);
         font-family: 'Quicksand', sans-serif;
-        
+       
       }
+      .generateb:hover{
+      }
+.generateb:active{
+box-shadow: -0.2vh 0.2vw blue;
+}
   </style>
   </head>
   <body>
@@ -71,8 +77,8 @@
     <div class="generatebcontainer">
 <button onclick="generate()"class="generateb"id="generateb">Generate</button>
     </div>
-  
+ 
   <div class="thingnamecontainer">
-    <p id="thingname">ThingName</p></div>
+    <p id="thingname"></p></div>
   </body>
   </html>
