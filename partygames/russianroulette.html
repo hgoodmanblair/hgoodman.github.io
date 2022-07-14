@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Russian Rulet</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
+        const gun = document.getElementById('gun');
+const bleft = Math.random() * (6 - 2) + 2;
+let emptyslotsleft = Math.trunc(bleft);
+  var shotyet = 0;
+
+// when gun clicked
+function gunclicked() {
+if (shotyet === 0){
+
+  // get random degress value for gun to spin to
+  const randomdegvalue = Math.floor(Math.random() * 360) + 1;
+  const randomdegvalue2 = Math.trunc(randomdegvalue);
+  const randomdeg = "rotate(" +`${randomdegvalue2}deg` + ")";
+
+
+  
+  // spin the gun
+   
+   $('#gun').css({'transform':'rotate(720deg)'});
+     
+ setTimeout(function () {
+ $('#gun').css({'transform':randomdeg});
+  }, 100);
+  // pull the trigger
+  emptyslotsleft -= 1;
+  
+//if your on the bullet gun sound plays 
+    setTimeout(function () {
+  if (emptyslotsleft === 0) {
+     const shotaudio = new Audio('https://soundbible.com/mp3/10%20Guage%20Shotgun-SoundBible.com-74120584.mp3');
+  shotaudio.play();
+   shotyet = 1;
+  
+  $( "#gun" ).removeClass( "gun");
+  
+ $( "#gun" ).addClass( "shotanimation" );
+ 
+  setTimeout(function () {
+    $( "#gun" ).removeClass( "shotanimation");
+    
+     $( "#gun" ).addClass( "gun" );
+     
+ $('#body').css({'background-color':'red'});
+  }, 300);
+
+  
+    //if you still have empty slots left you live
+  } else if (emptyslotsleft > 0) {
+  
+  //plays empty barrel audio
+  const emptyaudio = new Audio('https://soundbible.com/mp3/Dry%20Fire%20Gun-SoundBible.com-2053652037.mp3');
+
+  emptyaudio.play()
+
+             
+  }
+  }, 1000);
+  
+  
+  
+}
+  }
+  
+
+
+        
+      </script>
+      <style>
+    body{
+      background:black;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      width:100vw;
+      height:100vh;
+      overflow-x:hidden;
+      overflow-y:hidden;
+    }
+    .gun{
+      width:calc(200px + 30vw);
+      background-size:calc(200px + 30vw);
+      height:calc(220px + 30vw);
+      background-image:url('https://vgraphs.com/images/weapons/skins/valorant-weapon-skin-standard-sheriff.png');
+      transition:0.3s;
+    }
+    .shotanimation{
+       width:calc(200px + 30vw);
+      background-size:calc(200px + 30vw);
+      height:calc(220px + 30vw);
+      background-image:url('https://vgraphs.com/images/weapons/skins/valorant-weapon-skin-standard-sheriff.png');
+      transition:0.3s;
+      animation:shotanim 0.1s 2;
+    }
+    @keyframes shotanim{
+      0%{filter:brightness(100%);}
+       50%{filter:brightness(200%);}
+        100%{filter:brightness(100%);;}
+    }
+
+  </style>
+  </head>
+  <body id="body">
+    
+    <div class="gun"id="gun"onclick="gunclicked()"></div>
+      
+    
+    
+    
+  </body>
+</html>
