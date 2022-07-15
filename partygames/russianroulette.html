@@ -87,14 +87,14 @@ if (shotyet == 0){
       width:calc(300px + 10vw);
       background-size:calc(300px + 10vw)calc(155px + 10vw);
       height:calc(155px + 10vw);
-      background-image:url('https://media.discordapp.net/attachments/996470836796063748/997523085886492712/water-gun-png-transparent-water-gun-images-351882-removebg-preview_1.png');
+      background-image:url('https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/25081/revolveroca-clipart-md.png');
       transition:0.3s;
     }
     .shotanimation{
        width:calc(300px + 10vw);
       background-size:calc(300px + 10vw)calc(155px + 10vw);
       height:calc(155px + 10vw);
-      background-image:url('https://media.discordapp.net/attachments/996470836796063748/997523085886492712/water-gun-png-transparent-water-gun-images-351882-removebg-preview_1.png');
+      background-image:url('https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/25081/revolveroca-clipart-md.png');
       transition:0.3s;
       animation:shotanim 0.1s 2;
     }
@@ -103,40 +103,22 @@ if (shotyet == 0){
        50%{filter:brightness(200%);}
         100%{filter:brightness(100%);;}
     }
-      button {
-        padding: 0.5vw 3vh;
-        font-size: 24px;
-        text-align: center;
-        cursor: pointer;
-        outline: none;
-        background-color: #242424;
-        border: none;
-        border-radius: 15px;
-        box-shadow: -2px 1vh gray;
-        transition: 0.2s;
-          margin:10px;
-      }
-button > p{
-background: -webkit-linear-gradient(0deg, red, orange, yellow, green, cyan);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-}
-button:hover{
-background-color:#191919;
-}
-
-      button:active {
-        background-color:#242424;
-        box-shadow: -0.5px 3px orange;
-        transform: translateY(4px);
-      }
+        .reloadb{
+          border:none;
+          padding:20px;
+          border-radius:10px;
+          background:#191919;
+          color:white;
+          margin:50px;
+          z-index:1000;
+        }
 
   </style>
   </head>
   <body id="body">
     
     <div class="gun"id="gun"onclick="gunclicked()"></div>
-    <button type="button"class="reloadb"id="reloadb"onClick="window.location.reload(true)"><p>Replay</p></button>   
+    <button type="button"class="reloadb"id="reloadb"onClick="window.location.reload(true)">Replay</button>   
     
     
     
