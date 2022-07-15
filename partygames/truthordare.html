@@ -82,29 +82,50 @@
   -webkit-text-fill-color: transparent;
         font-size:40px;
       }
-      button{
-        border:none;
-        border-radius:10px;
-        padding:20px;
-        font-size:30px;
-        color:white;
- font-family: 'Quicksand', sans-serif;
- background:#242424;
- box-shadow: -0.6vh 0.6vw red;
-        margin:20px;
+     
+        button {
+        padding: 0.5vw 3vh;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        background-color: #242424;
+        border: none;
+        border-radius: 15px;
+        box-shadow: -2px 1vh gray;
+        transition: 0.2s;
+          margin:10px;
       }
-      button:hover{
-        background:#191919;
-      }
-      button:active{
-box-shadow: -0.2vh 0.2vw blue;
+button > p{
+background: -webkit-linear-gradient(0deg, red, orange, yellow, green, cyan);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
+button:hover{
+background-color:#191919;
+}
+
+      button:active {
+        background-color:#242424;
+        box-shadow: -0.5px 3px orange;
+        transform: translateY(4px);
+      }
+      buttons{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:row;
+      }
 
   </style>
   </head>
   <body>
-    <button id="truthb"onclick="truth()">Truth</button>
-       <button id="dareb"onclick="dare()">Dare</button>
+    
+    <buttons>
+    <button id="truthb"onclick="truth()"><p>Truth</p></button>
+    <button id="dareb"onclick="dare()"><p>Dare</p></button>
+    </buttons>
+    
     <p id="result"></p>
   </body>
   </html>
