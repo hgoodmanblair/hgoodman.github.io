@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Truth Or Dare</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      
+       var truths = [
+         "What's the last lie you told?",
+         "What's your biggest fear?",
+       "What's the strangest thing you've ever eaten?",
+       "What's the biggest misconception about you?",
+       "What’s the biggest secret you’ve kept from your parents?",
+       "What's your biggest pet peeve?",
+       "What's the most embarrassing top-played song on your phone?",
+       "If you had to wear only flip flops or heels for the next 10 years, which would you choose?",
+       "What is the strangest rumour you've heard about yourself?",
+       "If you could be invisible for a day, what's the first thing you would do?",
+       "Name someone you've pretended to like but actually couldn't stand.",
+       "What's the last lie you told?",
+       "What is the weirdest dream you have ever had?",
+       "Would you trade your sibling in for a million dollars?",
+       "Would you rather live with no internet or no A/C or heating?",
+       "Have you ever kept a library book?",
+       "How many pancakes have you eaten in a single sitting?",
+       "Do you sleep with a stuffed animal?",
+       "If you were home by yourself all day, what would you do?",
+       "Do you like hanging out with your parents?",
+       "Have you ever eaten something off the floor?",
+       "Do you have a security blanket?"];
+      
+      var dares = [
+        "Do 100 squats.",
+        "Eat a banana without using your hands.",
+      "Let the rest of the group DM someone from your Instagram account.",
+      "Howl like a wolf for two minutes.",
+      "Pole dance with an imaginary pole.",
+      "Put as many snacks into your mouth at once as you can.",
+      "Dance without music for two minutes.",
+      "Try to lick your elbow",
+      "Tell everyone an embarrassing story about yourself",
+      "Try to put your whole fist in your mouth",
+      "Try and make the group laugh as quickly as possible",
+      "Pretend to be the person to your right for 10 minutes",
+      "Say two honest things about everyone else in the group",
+      "Eat a spoonful of mustard",
+      "Yell out the first word that comes to your mind",
+      "Keep three ice cubes in your mouth until they melt",
+      "Eat a raw piece of garlic",
+      "Show the last five people you texted and what the messages said",
+      "Attempt to breakdance for one minute.",
+      "Hold a funny face for the rest of the round.",
+      "Act like whatever animal someone yells out for the next 1 minute.",
+      "Depict a human life through interpretive dance."];
+      
+      
+      
+      function truth(){
+ var randomtruth = truths[Math.floor(Math.random() * truths.length)];
+         document.getElementById("result").innerHTML = randomtruth;
+      }
+      function dare(){ 
+ var randomdare = dares[Math.floor(Math.random() * dares.length)];
+         document.getElementById("result").innerHTML = randomdare;
+      }
+    </script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+      body{
+        background:black;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+        width:100vw;
+        height:100vh;
+            font-family: 'Quicksand', sans-serif;
+      }
+      #result{
+         background: -webkit-linear-gradient(0deg,red,orange,yellow,green,blue,cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        font-size:40px;
+      }
+      button{
+        border:none;
+        border-radius:10px;
+        padding:20px;
+        font-size:30px;
+        color:white;
+ font-family: 'Quicksand', sans-serif;
+ background:#242424;
+ box-shadow: -0.6vh 0.6vw red;
+        margin:20px;
+      }
+      button:hover{
+        background:#191919;
+      }
+      button:active{
+box-shadow: -0.2vh 0.2vw blue;
+}
+
+  </style>
+  </head>
+  <body>
+    <button id="truthb"onclick="truth()">Truth</button>
+       <button id="dareb"onclick="dare()">Dare</button>
+    <p id="result"></p>
+  </body>
+  </html>
