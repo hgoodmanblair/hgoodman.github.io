@@ -1,84 +1,105 @@
 <html>
+
   <head>
     <title>Headbands</title>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       var thingname = document.getElementById("thingname");
-     
-     
-      var stuff = ["Mickey Mouse", "Donald Duck","Elsa","Goofy","Snow White","Merida","Stich","Anna","Woody","Grogu","Captain Hook","Simba","Buzz Lightyear","Winnie-The-Poo","Olaf","Cinderella","Mulan","Pocahontas","Tinker-Bell","Snickers","Jolly Ranchers","Dum Dum's","Laughy Taffy","Hershey Kiss","Milky Way's","M&M's","Smarties's","Candy Canes","100 Grand","Ring Pop","Butter Finger","Crunch Bar","War Head","Starburst","Skittles","duck","koala","cow","goose","sheep","crow","chicken","cockroach","gorilla","bear","lizard","moose","deer","shark","tuna","butterfly","horse","dog","lion","tiger","Fox","jellyfish","bee","squid","starfish","Zebra","panda","frog","ant","snake","scorpian","Whale","geraff","carrot","pickle","toast","banana","rice","cake","icecream","green beans","rice","grapes","chicken","cucumber","cookies","cheese","popcorn","crackers","potato chips"];
-     
 
-     
-      function generate(){
+
+      var stuff = ["Mickey Mouse", "Donald Duck", "Elsa", "Goofy", "Snow White", "Merida", "Stich", "Anna", "Woody", "Grogu", "Captain Hook", "Simba", "Buzz Lightyear", "Winnie-The-Poo", "Olaf", "Cinderella", "Mulan", "Pocahontas", "Tinker-Bell", "Snickers", "Jolly Ranchers", "Dum Dum's", "Laughy Taffy", "Hershey Kiss", "Milky Way's", "M&M's", "Smarties's", "Candy Canes", "100 Grand", "Ring Pop", "Butter Finger", "Crunch Bar", "War Head", "Starburst", "Skittles", "duck", "koala", "cow", "goose", "sheep", "crow", "chicken", "cockroach", "gorilla", "bear", "lizard", "moose", "deer", "shark", "tuna", "butterfly", "horse", "dog", "lion", "tiger", "Fox", "jellyfish", "bee", "squid", "starfish", "Zebra", "panda", "frog", "ant", "snake", "scorpian", "Whale", "geraff", "carrot", "pickle", "toast", "banana", "rice", "cake", "icecream", "green beans", "rice", "grapes", "chicken", "cucumber", "cookies", "cheese", "popcorn", "crackers", "potato chips"];
+
+
+
+      function generate() {
         var randomname = stuff[Math.floor(Math.random() * stuff.length)];
-      document.getElementById("thingname").innerHTML = randomname;
+        document.getElementById("thingname").innerHTML = randomname;
       }
+
     </script>
     <style>
-       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-      body{
-        background:black;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:column;
-        width:100vw;
-        height:100vh;
-            font-family: 'Quicksand', sans-serif;
-      }
-      .generatebcontainer{
-        width:100vw;
-        text-align:center;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-      }
-      .generateb{
-        border:none;
-        border-radius:10px;
-        padding:20px;
-        font-size:30px;
-        color:white;
- font-family: 'Quicksand', sans-serif;
- background:#242424;
- box-shadow: -0.6vh 0.6vw red;
-      }
-      .generateb:hover{
-        background:#191919;
-      }
-      .thingnamecontainer{
-        width:100vw;
-         text-align:center;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-      }
-      #thingname{
-         background: -webkit-linear-gradient(0deg,red,orange,yellow,green,blue,cyan);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-        font-size:calc(20px + 10vw);
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+      body {
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
         font-family: 'Quicksand', sans-serif;
-       
       }
-      .generateb:hover{
+
+      .generatebcontainer {
+        width: 100vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-.generateb:active{
-box-shadow: -0.2vh 0.2vw blue;
+
+      .generateb {
+        padding: 0.5vw 3vh;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        background-color: #242424;
+        border: none;
+        border-radius: 15px;
+        box-shadow: -2px 1vh gray;
+        transition: 0.2s;
+      }
+.generateb > p{
+background: -webkit-linear-gradient(0deg, red, orange, yellow, green, cyan);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
-  </style>
+.generateb:hover{
+background-color:#191919;
+}
+
+      .generateb:active {
+        background-color:#242424;
+        box-shadow: -0.5px 3px orange;
+        transform: translateY(4px);
+      }
+
+      .thingnamecontainer {
+        width: 100vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #thingname {
+        background: -webkit-linear-gradient(0deg, red, orange, yellow, green, blue, cyan);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: calc(20px + 10vw);
+        font-family: 'Quicksand', sans-serif;
+
+      }
+
+      .generateb:hover {}
+
+    </style>
   </head>
+
   <body>
 
-<! -- Put your phone on top of your head so that the screen faces away. Get one of your freinds to click the "Generate" button to generate a random thing on the screen. Now, your freinds have to describe the thing on your phone, without giving away what it is. -->
+    <! -- Put your phone on top of your head so that the screen faces away. Get one of your freinds to click the "Generate" button to generate a random thing on the screen. Now, your freinds have to describe the thing on your phone, without giving away what it is. -->
 
 
-    <div class="generatebcontainer">
-<button onclick="generate()"class="generateb"id="generateb">Generate</button>
-    </div>
- 
-  <div class="thingnamecontainer">
-    <p id="thingname"></p></div>
+      <div class="generatebcontainer">
+        <button onclick="generate()" class="generateb" id="generateb"><p>Generate</p></button>
+      </div>
+
+      <div class="thingnamecontainer">
+        <p id="thingname"></p>
+      </div>
   </body>
-  </html>
+
+</html>
