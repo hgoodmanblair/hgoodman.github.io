@@ -24,21 +24,31 @@
   <div id="invertedpage"></div>
   
   
+
+  
+  
   <div class="cursor"id="cursor"></div>
   
   
   
-  <div class="section"id="section">
+  <div class="section"id="landingsection">
 
   
+<nav>
+	<a href="#landingsection">Home</a>
+	<a href="#aboutsection">About</a>
+	<a href="#blogsection">Blog</a>
+	<a href="#portfoliosection">Portfolio</a>
+	<a href="#contactsection">Contact</a>
+	<div class="animation start-home"></div>
+</nav>
+
     
 <div class="title"id="title">Hudson Goodman</div>
 <div class="title2"id="title2">Programmer / Artist </div>
 
 <div class="statusandmode"id="statusandmode">
 <div class="status"id="status"><b>Alias: </b>@Bluehollowdev</div>
-<button id="darkmodeb"class="modeb"><i class="fa-solid fa-sun"></i></button>
-<button id="lightmodeb"class="modeb"><i class="fa-solid fa-moon"></i></button>
 </div>
 
 
@@ -63,8 +73,17 @@
 </div>
 
 
+<div class="section"style="background:#f0f0f0;"id="aboutsection">
+  
+<div class="sectiontitle">About Me</div>
 
-  <div class="section"style="background:#f0f0f0;height:auto;padding:50px 0px">
+<div class="section-description">
+  Hello, my name is Hudson and I am a student and programmer. I am fluent in <b>HTML</b>, <b>CSS</b>, and <b>Javascript</b>. In my free time I enjoy petting my dog, sketching, and playing video games.</div>
+</div>
+</div>
+
+
+  <div class="section"style="background:white;"id="portfoliosection">
     <div class="sectiontitle">Project Portfolio</div>
     
     <div class="section-description">Here is a collection of every website commission I have ever done as well as some of my personal programming projects.This portfolio will be updated whenever I complete a new project. </div>
@@ -88,11 +107,6 @@
 
 
 
-
-
-
-
-
 <div class="footerbar">
       <div class="footer-empty-side"></div>
   <div class="footer-icons">
@@ -108,44 +122,6 @@
 
 
 </body>
-<script>
-
-body =  document.getElementById("body");
-invertedpage = document.getElementById("invertedpage");
-title = document.getElementById("title");
-title2 = document.getElementById("title2");
-buttons = document.getElementById("buttons");
-
-
-status = document.getElementById("status");
-darkmodeb = document.getElementById("darkmodeb");
-lightmodeb = document.getElementById("lightmodeb");
-statusandmode = document.getElementById("statusandmode");
-section = document.getElementById("section");
-darkmodeb.style.display = "none";
-
-lightmodeb.style.display = "block";
-    
-
- darkmodeb.addEventListener('click', function (event) {
- 
-   invertedpage.style.opacity = "100%";
-    darkmodeb.style.display = "none";
-    lightmodeb.style.display = "block";
-  
- });
- 
- lightmodeb.addEventListener('click', function (event) {
- 
-   invertedpage.style.opacity = "0%";
-    darkmodeb.style.display = "block";
-    lightmodeb.style.display = "none";
-  
- });
- 
-
-
-</script>
 </html>
 
 
