@@ -279,7 +279,7 @@ margin:-8px;
 nav {
 	margin: 27px auto 0;
 	position: relative;
-	width: 590px;
+	width: 490px;
 	height: 50px;
 	font-size: 0;
 	font-family:roboto;
@@ -316,12 +316,9 @@ nav .animation {
 	width: 110px;
 }
 .menub:nth-child(3) {
-	width: 100px;
-}
-.menub:nth-child(4) {
 	width: 160px;
 }
-.menub:nth-child(5) {
+.menub:nth-child(4) {
 	width: 120px;
 }
 nav .start-home, .menub:nth-child(1):hover~.animation {
@@ -336,21 +333,15 @@ nav .start-about, .menub:nth-child(2):hover~.animation {
 	background-color: #ff1f8f;
 	   border-radius:100000000000px;
 }
-nav .start-blog, .menub:nth-child(3):hover~.animation {
-	width: 100px;
-	left: 210px;
-	background-color: #ff1f8f;
-	   border-radius:100000000000px;
-}
-nav .start-portefolio, .menub:nth-child(4):hover~.animation {
-	width: 160px;
-	left: 310px;
-	background-color: #ff1f8f;
-	   border-radius:100000000000px;
-}
-nav .start-contact, .menub:nth-child(5):hover~.animation {
+nav .start-portefolio, .menub:nth-child(3):hover~.animation {
 	width: 120px;
-	left: 470px;
+	left: 230px;
+	background-color: #ff1f8f;
+	   border-radius:100000000000px;
+}
+nav .start-contact, .menub:nth-child(4):hover~.animation {
+	width: 120px;
+	left: 370px;
 	background-color: #ff1f8f;
 	   border-radius:100000000000px;
 }
