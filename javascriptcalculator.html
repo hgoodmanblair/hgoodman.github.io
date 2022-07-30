@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Javascript Calculator</title></head>
+  <style>
+    body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:100vw;
+  height:100vh;
+overflow:hidden;
+
+  background:linear-gradient(to bottom right, red, #03b6fc);
+  background-size:cover;
+  
+  font-weight:bold;
+  font-family:roboto
+}
+ul{
+    display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  flex-direction:column;
+  width:80vw;
+}
+symbol{
+  margin:0px 5px;
+  
+}
+li{
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  margin:10px;
+
+}
+input{
+  resize:none;
+    border:1px solid black;
+  border-radius:50px;
+    padding:20px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width:30%;
+}
+.answer{
+  background:white;
+  padding:20px;
+  border:1px solid black;
+    border-radius:50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#plussymbol, #subtractsymbol, #dividesymbol, #multiplysymbol{
+  background:white;
+      border:1px solid black;
+  border-radius:50px;
+    padding:20px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  </style>
+<body id="body">
+
+  <ul>
+    
+    
+    <li> <input id="plus1"placeholder="0"></input>
+    <symbol onclick="calculateplus()"id="plussymbol"> +  </symbol>
+    <symbol  onclick="calculatesubtract()"id="subtractsymbol"> -  </symbol>
+    <symbol  onclick="calculatemultiply()"id="multiplysymbol"> x  </symbol>
+    <symbol  onclick="calculatedivide()"id="dividesymbol"> /  </symbol>
+  
+  <input id="plus2"placeholder="0"></input> <symbol> =  </symbol>
+
+<p id="plusa"class="answer"></p>
+    </li>
+  
+  
+
+  </ul>
+  
+  
+  <script>
+    
+    
+ globalThis.operation = "plus";
+function calculateplus(){
+  globalThis.operation = "plus";
+  
+    document.getElementById("plussymbol").style.backgroundColor = "lightgrey";
+      document.getElementById("subtractsymbol").style.backgroundColor = "white";
+      document.getElementById("dividesymbol").style.backgroundColor = "white";
+      document.getElementById("multiplysymbol").style.backgroundColor = "white";
+
+    var plus1 = document.getElementById("plus1").value;
+       var plus2 = document.getElementById("plus2").value;
+    var plus = Number(plus1) + Number(plus2);
+      document.getElementById("plusa").innerHTML = plus ;
+  
+  }
+function calculatemultiply(){
+  globalThis.operation = "multiply";
+       document.getElementById("multiplysymbol").style.backgroundColor = "lightgrey";
+  document.getElementById("subtractsymbol").style.backgroundColor = "white";
+      document.getElementById("dividesymbol").style.backgroundColor = "white";
+      document.getElementById("plussymbol").style.backgroundColor = "white";
+
+
+    var plus1 = document.getElementById("plus1").value;
+       var plus2 = document.getElementById("plus2").value;
+    var plus = Number(plus1) * Number(plus2);
+      document.getElementById("plusa").innerHTML = plus ;
+  
+  }
+function calculatesubtract(){
+    globalThis.operation = "subtract";
+  
+        document.getElementById("subtractsymbol").style.backgroundColor = "lightgrey";
+      document.getElementById("plussymbol").style.backgroundColor = "white";
+      document.getElementById("dividesymbol").style.backgroundColor = "white";
+      document.getElementById("multiplysymbol").style.backgroundColor = "white";
+
+    var plus1 = document.getElementById("plus1").value;
+       var plus2 = document.getElementById("plus2").value;
+    var plus = Number(plus1) - Number(plus2);
+      document.getElementById("plusa").innerHTML = plus ;
+  
+  }
+function calculatedivide(){
+    globalThis.operation = "divide";
+        document.getElementById("dividesymbol").style.backgroundColor = "lightgrey";
+      document.getElementById("subtractsymbol").style.backgroundColor = "white";
+      document.getElementById("plussymbol").style.backgroundColor = "white";
+      document.getElementById("multiplysymbol").style.backgroundColor = "white";
+
+    var plus1 = document.getElementById("plus1").value;
+       var plus2 = document.getElementById("plus2").value;
+    var plus = Number(plus1) / Number(plus2);
+      document.getElementById("plusa").innerHTML = plus ;
+  
+  }
+
+setInterval(function(){
+  if ( globalThis.operation === "plus"){
+    calculateplus();
+
+  }
+    if ( globalThis.operation === "subtract"){
+    calculatesubtract();
+
+  }
+    if ( globalThis.operation === "multiply"){
+    calculatemultiply();
+
+  }
+    if ( globalThis.operation === "divide"){
+    calculatedivide();
+
+  }
+}, 100)
+  </script>
+
+  
+  
+</body></html>
