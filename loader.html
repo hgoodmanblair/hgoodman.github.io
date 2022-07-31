@@ -1,0 +1,49 @@
+<html>
+  <head>
+  </head>
+  <style>
+    body{
+  background:#191919;
+      width:100vw;
+      height:100vh;
+}
+    #target{
+      width:70px;
+      height:70px;
+      position:absolute;
+      transition:0.5s;
+      filter: drop-shadow(0 0.2rem 0.25rem black);
+    }
+  </style>
+<body>
+  
+  <div id="target"></div>
+
+  
+  <script>
+    var target = document.getElementById("target");
+    var target = document.getElementById("target");
+    
+    
+setInterval(function(){
+    var left = Math.floor(Math.random() * 80) + 1;
+    var top = Math.floor(Math.random() * 80) + 1;   
+    target.style.left = left + "vw";
+    target.style.top = top + "vh";
+  
+  
+   var randomColor = Math.floor(Math.random()*16777215).toString(16);
+ target.style.background = "#" + randomColor;
+  
+  var randomradius = Math.floor(Math.random() * 50) + 0;
+  target.style.borderRadius = randomradius + "%"; 
+  
+  var randomdirection = Math.floor(Math.random() * 360) + 0;
+  target.style.transform = "rotate(" + randomdirection + "deg)";
+  
+  },1000);
+  
+    
+  </script>
+</body>
+</html>
