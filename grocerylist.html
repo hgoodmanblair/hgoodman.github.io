@@ -44,6 +44,7 @@ border-radius:10px;
 }
 input{
   width:90%;
+  padding:0px 10px;
     font-family:roboto;
   background:white;
   height:70%;
@@ -51,7 +52,7 @@ input{
   justify-content:center;
   align-items:center;
   outline:none;
-  border-radius:10px;
+  border-radius:1000px;
     border:none;
     letter-spacing:2px;
     font-size:20px;
@@ -110,6 +111,8 @@ i{
 }
 #ratio{
    font-family:roboto;
+   font-size:25px;
+   color:#f0574d;;
 }
 h1{
   font-family:roboto;
@@ -134,9 +137,9 @@ h1{
   <body>
 
 <div class="list">
-  <h1>Grocery List</h1>
+  <h1>Grocery List <i class="fa-solid fa-cart-shopping"></i></h1>
   
-<div class="newitem"><input class="newiteminput"id="newiteminput"></input><button class="newitemb"onclick="newitem()"><i class="fa-solid fa-plus"></i></div></newitem>
+<div class="newitem"><input class="newiteminput"id="newiteminput"placeholder="enter an item here..."></input><button class="newitemb"onclick="newitem()"><i class="fa-solid fa-plus"></i></div></newitem>
 
 
   <p id="ratio"></p>
@@ -154,6 +157,9 @@ h1{
   
   window.amountofitems = 0;
 window.amountofcheckeditems = 0;
+const newiteminput = document.getElementById("newiteminput");
+const inputcontainer = document.getElementById('inputcontainer');
+const ratio =  document.getElementById("ratio");
 document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
       newitem();
@@ -161,11 +167,13 @@ document.addEventListener("keyup", function(event) {
 });
 
 function newitem(){
-  var newitemname = document.getElementById("newiteminput").value;
-   
+       if (newiteminput.value != ""){
+  var newitemname = newiteminput.value;
+
+     
   window.amountofitems = window.amountofitems + 1;
   let i = 1
-const original = document.getElementById('inputcontainer');
+const original = inputcontainer;
 const onClick = () => console.log('clicked')
 original.onclick = onClick
 
@@ -180,7 +188,8 @@ var x = clone.querySelectorAll(".input");
 clone.style.display = "flex";
 clone.onclick = onClick;
 original.parentNode.appendChild(clone);
-  document.getElementById("newiteminput").value = "";
+  newiteminput.value = "";
+       }
 }
 
    document.body.addEventListener("click", function(event) {
@@ -213,11 +222,12 @@ original.parentNode.appendChild(clone);
   });
 
 setInterval(function(){
-  if (window.amountofcheckitems != window.amountofitems){
-
-  document.getElementById("ratio").innerHTML = window.amountofcheckeditems  + "/" + window.amountofitems;
-} else{
-  document.getElementById("ratio").innerHTML = "your all set!";
+  if (window.amountofcheckitems == window.amountofitems){
+    alert("hello");
+ ratio.innerHTML = "your all set!";
+ 
+} else if (window.amountofcheckitems != window.amountofitems){
+ ratio.innerHTML = window.amountofcheckeditems  + "/" + window.amountofitems;
 }
 
 }, 200);
