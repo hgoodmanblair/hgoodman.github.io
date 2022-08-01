@@ -17,7 +17,7 @@ body{
   justify-content:center;
   align-items:center;
   
-  background-image:url('https://camo.envatousercontent.com/7b65e9dde75c8765c2bf27e34b4375092458b1d4/68747470733a2f2f692e6962622e636f2f4e5450515966772f332e6a7067');
+  background:grey;
   background-size:cover;
 }
 button,input{
@@ -58,7 +58,7 @@ input{
     letter-spacing:2px;
     font-size:20px;
 }
-.closeb,.checkb{
+.closeb{
   height:40px;
   width:40px;
   border-radius:50%;
@@ -66,16 +66,27 @@ input{
   margin:5px;
   background:white;
 }
+.checkb{
+  background:#f0574d;
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  border:none;
+  color:white;
+  margin:5px;
+}
 
 .newitemb{
-  width:50px;
   height:50px;
     font-family:roboto;
     border:none;
-    border-radius:50%;
+    border-radius:40px;
     margin:10px;
     background:#f0574d;
     color:white;
+}
+.fa-plus{
+  margin:10px;
 }
 .itembuttons{
    display:flex;
@@ -109,7 +120,7 @@ i{
   <body>
 
 <div class="list">
-<button class="newitemb"onclick="newitem()"><i class="fa-solid fa-plus"></i></button>
+<button class="newitemb"onclick="newitem()">Create New Item<i class="fa-solid fa-plus"></i></button>
   <p id="ratio"></p>
   <div class="inputcontainer"id="inputcontainer"style="display:none;">
     <input class="input"></input>
@@ -162,8 +173,10 @@ original.parentNode.appendChild(clone);
     if (event.target.className == "checkb")
     var parentelement = event.target.parentElement;
      parentelement.parentElement.style.textDecoration = "line-through";
+    parentelement.parentElement.style.color = "#f0574d";
          event.target.style.display = "none";
          event.target.parentElement.style.width = "auto";
+      
     window.amountofcheckeditems = window.amountofcheckeditems + 1;
      
   });
