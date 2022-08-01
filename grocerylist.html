@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Grocery List App</title>
+            <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head>
+  <style>
+    
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  overflow:hidden;
+  height:auto;
+  background-image:url('https://camo.envatousercontent.com/7b65e9dde75c8765c2bf27e34b4375092458b1d4/68747470733a2f2f692e6962622e636f2f4e5450515966772f332e6a7067');
+  background-size:cover;
+}
+button,input{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.list{
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width:70%;
+  height:100vh;
+border-radius:10px;
+  text-align:center;
+  flex-direction:column;
+  overflow: auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.inputcontainer{
+  width:100%;
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  height:70px;
+}
+input{
+  width:90%;
+    font-family:roboto;
+  background:white;
+  height:70%;
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  outline:none;
+  border-radius:10px;
+    border:none;
+}
+.closeb,.checkb{
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  border:none;
+  margin:5px;
+}
+
+.newitemb{
+  width:50px;
+  height:50px;
+    font-family:roboto;
+    border:none;
+    border-radius:50%;
+    margin:10px;
+    background:#f0574d;
+    color:white;
+}
+.itembuttons{
+   display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+  height:70%;
+  width:20%;
+}
+#ratio{
+   font-family:roboto;
+}
+@media only screen and (max-width: 600px) {
+  .list{
+    height:90vh;
+  }
+  input{
+    width:70%;
+  }
+  .itembuttons{
+    width:30%;
+  }
+}
+
+
+  </style>
+  <body>
+
+<div class="list">
+<button class="newitemb"onclick="newitem()"><i class="fa-solid fa-plus"></i></button>
+  <p id="ratio"></p>
+  <div class="inputcontainer"id="inputcontainer"style="display:none;">
+    <input class="input">
+    <div class="itembuttons">
+    <button id="closeb"class="checkb"><i class="fa-solid fa-check"></i></button>
+  <button id="checkb"class="closeb"><i class="fa-solid fa-x"></i></button>
+  </div>
+    </input>
+</div>
+
+
+</div>
+<script>
+  
+  window.amountofitems = 0;
+window.amountofcheckeditems = 0;
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      newitem();
+      }
+});
+
+function newitem(){
+ 
+  window.amountofitems = window.amountofitems + 1;
+  let i = 1
+const original = document.getElementById('inputcontainer');
+const onClick = () => console.log('clicked')
+original.onclick = onClick
+
+const clone = original.cloneNode(true);
+i++
+clone.id = i;
+  clone.style.display = "flex";
+clone.onclick = onClick;
+original.parentNode.appendChild(clone);
+}
+
+   document.body.addEventListener("click", function(event) {
+    if (event.target.className == "closeb")
+      var parentelement = event.target.parentElement;
+     parentelement.parentElement.style.display="none";
+     
+     if (parentelement.parentElement.style.backgroundColor == "green") {
+       window.amountofcheckeditems = window.amountofcheckeditems - 1;
+     }
+     
+     window.amountofitems = window.amountofitems - 1;
+  });
+ document.body.addEventListener("click", function(event) {
+    if (event.target.className == "checkb")
+    var parentelement = event.target.parentElement;
+     parentelement.parentElement.style.backgroundColor="green";
+    window.amountofcheckeditems = window.amountofcheckeditems + 1;
+     
+  });
+
+setInterval(function(){
+  document.getElementById("ratio").innerHTML = window.amountofcheckeditems  + "/" + window.amountofitems;
+}, 200)
+</script>
+
+</body>
+   </html>
