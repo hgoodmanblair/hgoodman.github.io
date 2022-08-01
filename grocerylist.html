@@ -17,7 +17,7 @@ body{
   justify-content:center;
   align-items:center;
   
-  background:grey;
+  background:#f0574d;
   background-size:cover;
 }
 button,input{
@@ -25,9 +25,7 @@ button,input{
   
 }
 .list{
-  background: rgba(255,255,255,0.4);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: white;
   width:70%;
   height:90vh;
   padding:10px;
@@ -200,7 +198,13 @@ original.parentNode.appendChild(clone);
     if (event.target.className == "checkb")
     var parentelement = event.target.parentElement;
      parentelement.parentElement.style.textDecoration = "line-through";
-    parentelement.parentElement.style.color = "#f0574d";
+     
+     var x = parentelement.parentElement.querySelectorAll(".input")
+     x[0].style.backgroundColor ="#42f5c2";
+     
+     var y = parentelement.parentElement.querySelectorAll(".closeb")
+     y[0].style.backgroundColor ="#42f5c2";
+
          event.target.style.display = "none";
          event.target.parentElement.style.width = "auto";
       
@@ -209,8 +213,14 @@ original.parentNode.appendChild(clone);
   });
 
 setInterval(function(){
+  if (window.amountofcheckitems != window.amountofitems){
+
   document.getElementById("ratio").innerHTML = window.amountofcheckeditems  + "/" + window.amountofitems;
-}, 200)
+} else{
+  document.getElementById("ratio").innerHTML = "your all set!";
+}
+
+}, 200);
 </script>
 
 </body>
