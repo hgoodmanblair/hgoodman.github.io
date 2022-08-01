@@ -75,9 +75,20 @@ input{
   color:white;
   margin:5px;
 }
+.newitem{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+.newiteminput{
+  width:200px;
+  height:50px;
+}
 
 .newitemb{
   height:50px;
+  width:50px;
     font-family:roboto;
     border:none;
     border-radius:40px;
@@ -102,6 +113,11 @@ i{
 #ratio{
    font-family:roboto;
 }
+h1{
+  font-family:roboto;
+  letter-spacing:1.5px;
+}
+
 @media only screen and (max-width: 600px) {
   .list{
     height:90vh;
@@ -120,7 +136,11 @@ i{
   <body>
 
 <div class="list">
-<button class="newitemb"onclick="newitem()">Create New Item<i class="fa-solid fa-plus"></i></button>
+  <h1>Grocery List</h1>
+  
+<div class="newitem"><input class="newiteminput"id="newiteminput"></input><button class="newitemb"onclick="newitem()"><i class="fa-solid fa-plus"></i></div></newitem>
+
+
   <p id="ratio"></p>
   <div class="inputcontainer"id="inputcontainer"style="display:none;">
     <input class="input"></input>
@@ -143,7 +163,8 @@ document.addEventListener("keyup", function(event) {
 });
 
 function newitem(){
- 
+  var newitemname = document.getElementById("newiteminput").value;
+   
   window.amountofitems = window.amountofitems + 1;
   let i = 1
 const original = document.getElementById('inputcontainer');
@@ -153,9 +174,15 @@ original.onclick = onClick
 const clone = original.cloneNode(true);
 i++
 clone.id = i;
-  clone.style.display = "flex";
+
+var x = clone.querySelectorAll(".input");
+  x[0].value = newitemname;
+  
+  
+clone.style.display = "flex";
 clone.onclick = onClick;
 original.parentNode.appendChild(clone);
+  document.getElementById("newiteminput").value = "";
 }
 
    document.body.addEventListener("click", function(event) {
