@@ -12,7 +12,7 @@
 }
   
 body{
-  background:white;
+  background:#ffe2a6;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -42,6 +42,14 @@ h2{
 }
 .buttongroup > a  > button{
   padding:20px;
-  border:none;
+  border:2px solid black;
   border-radius:20px;
+  background:none;
+  transition:0.2s;
+}
+.buttongroup > a > button:hover{
+  background:black;
+  color:white;
+  transition:0.2s;
+  cursor:pointer;
 }
