@@ -39,4 +39,5 @@ h1{
   width:300px;
   margin:20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  filter:brightness(100%);
 }
