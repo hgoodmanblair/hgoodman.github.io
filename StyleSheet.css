@@ -25,11 +25,16 @@ body{
 h1{
   font-family: 'Playfair Display', serif;
     font-size:70px;
+    animation:fadeInUp 1s 1;
 }
 h2{
   font-family: 'Playfair Display', serif;
   margin-top:-20px;
+  animation:fadeInUp 1s 1;
   
+}
+.buttongroup{
+    animation:fadeInUp 1s 1;
 }
 .buttongroup > a{
   width:auto;
