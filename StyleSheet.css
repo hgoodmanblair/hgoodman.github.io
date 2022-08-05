@@ -43,13 +43,14 @@ h2{
 .buttongroup > a  > button{
   padding:20px;
   border:2px solid black;
-  border-radius:20px;
-  background:white;
+  background:none;
   transition:0.2s;
+    box-shadow: #e0c792 0px 5px 5px;
 }
 .buttongroup > a > button:hover{
   background:black;
   color:white;
   transition:0.2s;
   cursor:pointer;
+    box-shadow: none;
 }
