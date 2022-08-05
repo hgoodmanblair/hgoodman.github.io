@@ -44,7 +44,7 @@ h2{
   padding:20px;
   border:2px solid black;
   border-radius:20px;
-  background:none;
+  background:white;
   transition:0.2s;
 }
 .buttongroup > a > button:hover{
