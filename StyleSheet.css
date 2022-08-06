@@ -31,9 +31,7 @@ body{
   height:60vh;
    display:flex;
   justify-content:center;
-  background: rgba( 255, 255, 255, .10 );
-backdrop-filter: blur( 10px );
--webkit-backdrop-filter: blur( 10px );
+  background: white;
   align-items:center;
   flex-direction:column;
   
@@ -43,9 +41,7 @@ backdrop-filter: blur( 10px );
   width:50vw;
   height:5vh;
    display:flex;
-   background: rgba( 255, 255, 255, 0.10 );
-backdrop-filter: blur( 0px );
--webkit-backdrop-filter: blur( 0px );
+   background: white;
   align-items:center;
   flex-direction:row;
   margin-bottom:-2px;
@@ -61,6 +57,12 @@ backdrop-filter: blur( 0px );
   border:2px solid black;
       padding:10px 20px;
         margin:10px;
+          transition:0.2s;
+}
+.logocontainer:hover{
+  background:black;
+  color:white;
+  transition:0.2s;
 }
 .logo{
   font-family: 'Playfair Display', serif;
@@ -68,10 +70,7 @@ backdrop-filter: blur( 0px );
     font-size:calc(30px + 4vw);
     animation:fadeInUp 1s 1;
     text-align:center;
-      -webkit-text-fill-color: black;
-      letter-spacing:2px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+
   
 }
 .logofullname{
@@ -116,6 +115,7 @@ backdrop-filter: blur( 0px );
     height:90vh;
     border:none;
     box-shadow:none;
+    background:none;
   }
   .header{
     display:none;
@@ -124,8 +124,16 @@ backdrop-filter: blur( 0px );
     flex-direction:column;
     width:100%;
   }
+  .buttongroup > a{
+    color:black;
+  }
   .buttongroup > a > button{
     width:50vw;
     margin:10px;
+    color:black;
+  }
+  .logo{
+    font-size:100px;
   }
 }
+
