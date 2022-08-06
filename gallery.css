@@ -21,7 +21,7 @@ body{
 overflow-x:hidden;
   max-width:100vw;
 }
-h1{
+.title{
   font-family: 'Playfair Display', serif;
     font-size:70px;
     animation:fadeInUp 1s 1;
@@ -49,4 +49,10 @@ h1{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   filter:brightness(100%);
   width:100%;
+}
+#totalimages{
+  color:#ffe2a6;
+  filter:brightness(50%);
+  font-size:25px;
+   font-family: 'Playfair Display', serif;
 }
