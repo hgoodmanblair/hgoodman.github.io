@@ -36,7 +36,7 @@
 
 
 
-     <div class="feedbackcontainer">
+     <div class="feedbackcontainer"id="feedbackcontainer">
        <input id="email"placeholder = "Email..">
        <input id="feedback"placeholder = "Like my work? Send me a quick message.">
        <button onclick="send();"id="sendfeedbackb">Send</button></div>
@@ -74,7 +74,12 @@ const params = {
 
  
     if (message == "" || email == "") {
-      
+       document.getElementById('feedbackcontainer').classList.add("shakeX");
+       
+        setTimeout(function () {
+         document.getElementById('feedbackcontainer').classList.remove("shakeX");
+        }, 2000);
+        
       return false;
     }
 
