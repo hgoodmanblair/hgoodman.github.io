@@ -27,6 +27,18 @@ overflow-x:hidden;
     font-size:70px;
     animation:fadeInUp 1s 1;
 }
+.subtitle{
+ font-size:25px;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:5px;
+    margin:10px;
+   font-family: roboto;
+     box-shadow: lightgrey 0px 5px 5px;
+}
 .artgallery{
 
   border:2px solid black;
