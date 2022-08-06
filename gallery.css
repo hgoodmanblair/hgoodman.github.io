@@ -13,7 +13,7 @@
 }
   
 body{
-    background:#ffe2a6;
+    background:white;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -36,7 +36,7 @@ overflow-x:hidden;
   justify-content:center;
   align-items:center;
     flex-wrap:wrap;
-  box-shadow: #e0c792 0px 5px 5px,rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  
 
 }
 .imgcontainer{
@@ -72,5 +72,5 @@ overflow-x:hidden;
   padding:5px;
     margin:10px;
    font-family: roboto;
-     box-shadow: #e0c792 0px 5px 5px;
+     box-shadow: lightgrey 0px 5px 5px;
 }
