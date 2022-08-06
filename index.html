@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <title>Home | Hudson Goodman</title>
+    <title>Home | Hudson Goodman</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="StyleSheet.css" rel="stylesheet">
       <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-           <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
+             <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
+             <script src="https://jeremyckahn.github.io/keydrown/dist/keydrown.js"></script>
   </head>
   <body>
     <div class="header">
@@ -28,14 +29,75 @@
 
 
 
-
 <div class="buttongroup">
   <a href="artgallery.html"><button>Art Gallery</button></a>
    <a href="https://codepen.io/HudsonGoodman"target="_blank"><button>Coding Projects</button></a>
 </div>
+
+
+
+     <div class="feedbackcontainer">
+       <input id="email"placeholder = "Email..">
+       <input id="feedback"placeholder = "Like my work? Send me a quick message.">
+       <button onclick="send();"id="sendfeedbackb">Send</button></div>
+     
+     <script>
+       function send() {
+var message  = document.getElementById("feedback").value;
+var email  = document.getElementById("email").value;
+      const request = new XMLHttpRequest();
+request.open("POST", "https://discord.com/api/webhooks/1002361166858829824/It0FIN8nRPY--pWD_cEwdNdEGVQWPUwNHxxe12UHb7-Mz4POcKJ6txV7INvo1pt718_D" );
+request.setRequestHeader('Content-type', 'application/json');
+const params = {
+  "content": `This is a message`,
+  "embeds": [
+    {
+      "type": "rich",
+      "title": `Form Result`,
+      "description": `Form`,
+      "color": 15258703,
+      "fields": [
+
+        {
+          "name": "`Message`",
+          "value": `${message}`
+        },
+        {
+          "name": "`Email`",
+          "value": `${email}`
+        }
+        
+      ]
+    }
+  ]
+}
+
+ 
+    if (message == "" || email == "") {
+      
+      return false;
+    }
+
+ 
+      
+
+request.send(JSON.stringify(params));
+
+ document.getElementById("feedback").style.display = "none";
+ document.getElementById("email").style.display = "none";
+   document.getElementById("sendfeedbackb").innerHTML = "Your Feedback has been sent!";
+   document.getElementById("sendfeedbackb").style.width = "auto";
+ 
+}
+     </script>
+
+
+
+
 </div>
 
 
+ 
 
 </body>
 </html>
