@@ -61,7 +61,7 @@ body{
 .logo{
   font-family: 'Playfair Display', serif;
   font-weight:bold;
-    font-size:calc(50px + 2vw);
+    font-size:calc(30px + 4vw);
     animation:fadeInUp 1s 1;
     text-align:center;
       -webkit-text-fill-color: black;
@@ -108,9 +108,6 @@ body{
     height:90vh;
   }
   .header{
-    width:80vw;
-  }
-  .logo{
-    font-size:140px;
+    display:none;
   }
 }
