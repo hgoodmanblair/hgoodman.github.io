@@ -15,7 +15,7 @@
 }
   
 body{
-  background:#ffe2a6;
+ background:linear-gradient(white,lightgrey);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -31,19 +31,24 @@ body{
   height:60vh;
    display:flex;
   justify-content:center;
+  background: rgba( 255, 255, 255, .10 );
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 10px );
   align-items:center;
   flex-direction:column;
-  box-shadow: #e0c792 0px 5px 5px,rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  
 }
 .header{
    border:2px solid black;
   width:50vw;
   height:5vh;
    display:flex;
+   background: rgba( 255, 255, 255, 0.10 );
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 0px );
   align-items:center;
   flex-direction:row;
   margin-bottom:-2px;
-  box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;;
 }
 .headerbuttons{
   margin:0px 10px;
@@ -56,7 +61,6 @@ body{
   border:2px solid black;
       padding:10px 20px;
         margin:10px;
-         box-shadow: #e0c792 0px 5px 5px;
 }
 .logo{
   font-family: 'Playfair Display', serif;
@@ -82,17 +86,20 @@ body{
 }
 .buttongroup{
     animation:fadeInUp 1s 1;
+    display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .buttongroup > a{
   width:auto;
   height:auto;
+  margin:10px;
 }
 .buttongroup > a  > button{
   padding:20px;
   border:2px solid black;
   background:none;
   transition:0.2s;
-    box-shadow: #e0c792 0px 5px 5px;
       font-family: 'Playfair Display', serif;
 }
 .buttongroup > a > button:hover{
@@ -102,12 +109,23 @@ body{
   cursor:pointer;
     box-shadow: none;
 }
+
 @media only screen and (max-width: 600px) {
   .container{
     width:80vw;
     height:90vh;
+    border:none;
+    box-shadow:none;
   }
   .header{
     display:none;
+  }
+  .buttongroup{
+    flex-direction:column;
+    width:100%;
+  }
+  .buttongroup > a > button{
+    width:50vw;
+    margin:10px;
   }
 }
