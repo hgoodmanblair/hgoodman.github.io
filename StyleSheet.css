@@ -52,13 +52,28 @@ body{
   margin:5px;
   font-size:20px;
 }
-h1{
+.logocontainer{
+  border:2px solid black;
+      padding:10px 20px;
+        margin:10px;
+         box-shadow: #e0c792 0px 5px 5px;
+}
+.logo{
   font-family: 'Playfair Display', serif;
+  font-weight:bold;
     font-size:70px;
     animation:fadeInUp 1s 1;
     text-align:center;
+      -webkit-text-fill-color: black;
+      letter-spacing:2px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  
 }
-h2{
+.logofullname{
+    font-family: 'Playfair Display', serif;
+}
+.subtitle{
   font-family: 'Playfair Display', serif;
   margin-top:-20px;
   animation:fadeInUp 1s 1;
@@ -77,6 +92,7 @@ h2{
   background:none;
   transition:0.2s;
     box-shadow: #e0c792 0px 5px 5px;
+      font-family: 'Playfair Display', serif;
 }
 .buttongroup > a > button:hover{
   background:black;
