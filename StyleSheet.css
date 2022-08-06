@@ -61,7 +61,7 @@ body{
 .logo{
   font-family: 'Playfair Display', serif;
   font-weight:bold;
-    font-size:calc(50px + 2vw);
+    font-size:calc(50px + 5vw);
     animation:fadeInUp 1s 1;
     text-align:center;
       -webkit-text-fill-color: black;
