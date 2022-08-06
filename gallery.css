@@ -30,14 +30,23 @@ h1{
   width:80vw;
   height:auto;
   display:flex;
+  opacity:0%;
   justify-content:center;
   align-items:center;
   flex-wrap:wrap;
   
 }
-.image{
-  width:300px;
+.imgcontainer{
+    width:300px;
   margin:20px;
+  height:400px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:black;
+}
+.image{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   filter:brightness(100%);
+  width:100%;
 }
