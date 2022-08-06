@@ -140,8 +140,9 @@ color:white;
  outline:none;
  cursor:pointer;
 }
-
-
+.shakeX{
+  animation:shakeX 1s 1;
+}
 @media only screen and (max-width: 600px) {
   .container{
     width:80vw;
