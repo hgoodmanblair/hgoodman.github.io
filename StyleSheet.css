@@ -28,13 +28,13 @@ body{
 .container{
   border:2px solid black;
   width:50vw;
-  height:60vh;
+  height:auto;
    display:flex;
   justify-content:center;
   background: white;
   align-items:center;
   flex-direction:column;
-  
+  padding:20px 0px;
 }
 .header{
    border:2px solid black;
@@ -45,6 +45,7 @@ body{
   align-items:center;
   flex-direction:row;
   margin-bottom:-2px;
+  
 }
 .headerbuttons{
   margin:0px 10px;
@@ -57,12 +58,8 @@ body{
   border:2px solid black;
       padding:10px 20px;
         margin:10px;
+        background:black;
           transition:0.2s;
-}
-.logocontainer:hover{
-  background:black;
-  color:white;
-  transition:0.2s;
 }
 .logo{
   font-family: 'Playfair Display', serif;
@@ -70,12 +67,13 @@ body{
     font-size:calc(30px + 4vw);
     animation:fadeInUp 1s 1;
     text-align:center;
-
+color:white;
   
 }
 .logofullname{
     font-family: 'Playfair Display', serif;
     text-align:center;
+    color:white;
 }
 .subtitle{
   font-family: 'Playfair Display', serif;
@@ -94,7 +92,7 @@ body{
   height:auto;
   margin:10px;
 }
-.buttongroup > a  > button{
+.buttongroup > a > button{
   padding:20px;
   border:2px solid black;
   background:none;
@@ -108,6 +106,41 @@ body{
   cursor:pointer;
     box-shadow: none;
 }
+.feedbackcontainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:50px;
+  margin-bottom:10px;
+}
+#feedback{
+  width:300px;
+  height:100%;
+  border-radius:0px;
+  border:2px solid black;
+  margin:-2px;
+}
+#email{
+  width:200px;
+  height:100%;
+  border-radius:0px;
+  border:2px solid black;
+}
+#sendfeedbackb{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  width:70px;
+  background:black;
+  color:white;
+ font-size:20px;
+ border:27px solid black;
+ font-family:'Playfair Display', serif;
+ outline:none;
+ cursor:pointer;
+}
+
 
 @media only screen and (max-width: 600px) {
   .container{
