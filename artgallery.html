@@ -87,6 +87,9 @@
       
       
     <script>
+    window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
       
       function getImageCount(topWindow) {
         try {
@@ -117,10 +120,8 @@
  document.getElementById("totalimages").innerHTML = imageCount;
       
 
-          setTimeout(function(){
-            console.log("something");
             document.getElementById("artgallery").style.opacity = "100%";
-          },5000);
+
         
       </script>
       
