@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="StyleSheet.css" rel="stylesheet">
+      <link href="global.css" rel="stylesheet">
       <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
              <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
-             <script src="https://jeremyckahn.github.io/keydrown/dist/keydrown.js"></script>
+                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         
   </head>
-  <body>
+  <body id="body">
     <div class="header">
       <div class="headerbuttons">
   <i class="fa-solid fa-square"></i>
@@ -35,9 +37,12 @@
 
 <div class="buttongroup">
   <a href="artgallery.html"><button>Art</button></a>
+  <a href="requestadrawing.html"style="pointer-events:none;"><button style="opacity:50%;pointer-events:none;">Request A Free Drawing</button></a>
+  
    <a href="https://codepen.io/HudsonGoodman"target="_blank"><button><i class="fa-brands fa-codepen"></i></button></a>
    <a href="https://github.com/hudsongoodman"target="_blank"><button><i class="fa-brands fa-github"></i></button></a>
    <a href="https://open.spotify.com/user/mrrav9h3cri19c9cjw7g47pn9"target="_blank"><button><i class="fa-brands fa-spotify"></i></button></a>
+   
 </div>
 
 
@@ -48,11 +53,12 @@
        <button onclick="send();"id="sendfeedbackb"><i class="fa-solid fa-paper-plane"></i></button></div>
      
      <script>
+
        function send() {
 var message  = document.getElementById("feedback").value;
 var email  = document.getElementById("email").value;
       const request = new XMLHttpRequest();
-request.open("POST", "https://discord.com/api/webhooks/1002361166858829824/It0FIN8nRPY--pWD_cEwdNdEGVQWPUwNHxxe12UHb7-Mz4POcKJ6txV7INvo1pt718_D" );
+request.open("POST", "https://discord.com/api/webhooks/1000895101255565332/tfucmiP4lULp-FVjLm8_oqoSMI7gCZMhigjuOl14pIn2V0RBUk6IB-hz5RmmMxCxAiGj" );
 request.setRequestHeader('Content-type', 'application/json');
 const params = {
   "content": `This is a message`,
