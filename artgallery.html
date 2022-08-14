@@ -29,25 +29,25 @@
       <script>
       
       const artgallery = document.getElementById("artgallery");
-      let numberofimages = 0;
-      let numberofimages2 = 0;
+      let numberofimages2021 = 23;
+      let numberofimages2022 = 42;
       
       
       //2022
-      for (i = 1; i <= 41; i++) {
-        ++numberofimages2;
+      for (i = 1; i <= numberofimages2022; i++) {
+        --numberofimages2022;
         const img = new Image(); // width, height
         img.id = "image";
-img.src = "images/gallery/2022_" + numberofimages2 + ".jpg";
+img.src = "images/gallery/2022_" + numberofimages2022 + ".jpg";
 artgallery.appendChild(img);
 }
 
       //2021
-      for (i = 1; i <= 22; i++) {
-        ++numberofimages;
+      for (i = 1; i <= numberofimages2021; i++) {
+        --numberofimages2021;
         const img = new Image(); // width, height
         img.id = "image";
-img.src = "images/gallery/2021_" + numberofimages + ".jpg";
+img.src = "images/gallery/2021_" + numberofimages2021 + ".jpg";
 artgallery.appendChild(img);
 }
 
