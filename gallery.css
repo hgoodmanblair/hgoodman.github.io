@@ -27,20 +27,14 @@
   background:black;
 
 }
-.imgcontainer{
-    width:300px;
+.image,#image{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  filter:brightness(100%);
+  width:300px;
   margin:20px;
-  height:400px;
   display:flex;
   justify-content:center;
   align-items:center;
-  background:black;
-  
-}
-.image{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  filter:brightness(100%);
-  width:100%;
 }
 .incounting{
    display:flex;
