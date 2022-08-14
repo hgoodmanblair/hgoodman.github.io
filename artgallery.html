@@ -29,12 +29,18 @@
       <script>
       
       const artgallery = document.getElementById("artgallery");
-      let numberofimages2021 = 23;
-      let numberofimages2022 = 42;
+      var numberofimages2021 = 22;
+      var numberofimages2022 = 41;
       
+      var imagecount = numberofimages2021 + numberofimages2022;
+document.getElementById("totalimages").innerHTML = imagecount;
+      
+      
+      ++numberofimages2021;
+      ++numberofimages2022;
       
       //2022
-      for (i = 1; i <= numberofimages2022; i++) {
+      for (i = 1; i <= 41; i++) {
         --numberofimages2022;
         const img = new Image(); // width, height
         img.id = "image";
@@ -43,7 +49,7 @@ artgallery.appendChild(img);
 }
 
       //2021
-      for (i = 1; i <= numberofimages2021; i++) {
+      for (i = 1; i <= 22; i++) {
         --numberofimages2021;
         const img = new Image(); // width, height
         img.id = "image";
@@ -57,47 +63,7 @@ artgallery.appendChild(img);
     
      
       
-      
-      
-    <script>
-    window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-      
-      function getImageCount(topWindow) {
-        try {
-            var images = topWindow.document.getElementsByTagName('img');
-            var imageCount;
-            for (var i=0, length = images.length; i < length; i++) {
-                var image = images[i];
-                var clientWidth = image.clientWidth;
-                if(clientWidth && clientWidth > 1) {
-                    var src = image.getAttribute('src');
-                    if(src) {
-                        src = src.toLowerCase();
-                        if(src.indexOf('.jpg') !== -1 ||
-                           src.indexOf('.jpeg') !== -1 ||
-                           src.indexOf('.gif') !== -1 ||
-                           src.indexOf('png') !== -1) {
-                           imageCount =  imageCount ? ++imageCount : 1;
-                        }
-                    }
-                }
-            }
-            return imageCount;
-        } catch (e) {
-            processError("getImageCount", e);
-        }
-    }
- var imageCount = getImageCount(top);
- document.getElementById("totalimages").innerHTML = imageCount;
-      
-
-            document.getElementById("artgallery").style.opacity = "100%";
-
-        
-      </script>
-      
+  
     </div>
   </body>
   </html>
