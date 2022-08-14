@@ -23,76 +23,38 @@
 
     
     <div class="incounting"><p id="totalimages"></p>Total Images In Counting</p></div>
-    
+
     <div class="artgallery"id="artgallery">
       
+      <script>
       
-      <div class="imgcontainer"><img src="images/gallery/2022_41.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_40.jpg" loading="lazy"class="image"></div>
-       <div class="imgcontainer"><img src="images/gallery/2022_39.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_38.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_37.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_36.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_35.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_34.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_33.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_32.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_31.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_30.jpg" loading="lazy"class="image"></div>
-       <div class="imgcontainer"><img src="images/gallery/2022_29.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_28.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_27.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_26.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_25.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_24.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_23.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_22.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_21.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_20.jpg" loading="lazy"class="image"></div>
-       <div class="imgcontainer"><img src="images/gallery/2022_19.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_18.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_17.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_16.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_15.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_14.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_13.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_12.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_11.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_10.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_9.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_8.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_7.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_6.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_5.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_4.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2022_3.jpg" loading="lazy"class="image"></div>
-       <div class="imgcontainer"><img src="images/gallery/2022_2.jpg" loading="lazy"class="image"></div>
-        <div class="imgcontainer"><img src="images/gallery/2022_1.jpg" loading="lazy"class="image"></div>
+      const artgallery = document.getElementById("artgallery");
+      let numberofimages = 0;
+      let numberofimages2 = 0;
       
       
-      <div class="imgcontainer"><img src="images/gallery/2021_22.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_21.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_20.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_19.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_18.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_17.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_16.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_15.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_14.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_13.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_12.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_11.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_10.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_9.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_8.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_7.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_6.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_5.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_4.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_3.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_2.jpg" loading="lazy"class="image"></div>
-      <div class="imgcontainer"><img src="images/gallery/2021_1.jpg" loading="lazy"class="image"></div>
+      //2022
+      for (i = 1; i <= 41; i++) {
+        ++numberofimages2;
+        const img = new Image(); // width, height
+        img.id = "image";
+img.src = "images/gallery/2022_" + numberofimages2 + ".jpg";
+artgallery.appendChild(img);
+}
+
+      //2021
+      for (i = 1; i <= 22; i++) {
+        ++numberofimages;
+        const img = new Image(); // width, height
+        img.id = "image";
+img.src = "images/gallery/2021_" + numberofimages + ".jpg";
+artgallery.appendChild(img);
+}
+
+
+      </script>
       
+    
      
       
       
