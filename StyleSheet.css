@@ -1,4 +1,9 @@
-
+body{
+  background-image:url("images/homepagebackground.png");
+  background-size:cover;
+  background-position:center;
+  
+}
 .logocontainer{
   border:2px solid black;
       padding:20px 20px;
