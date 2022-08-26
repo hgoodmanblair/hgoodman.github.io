@@ -8,17 +8,11 @@
       <link href="global.css" rel="stylesheet">
       <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
              <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
-                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                        
          
   </head>
   <body id="body">
-    <div class="header">
-      <div class="headerbuttons">
-  <i class="fa-solid fa-square"></i>
-   <i class="fa-solid fa-circle"></i>
-   <i class="fa-solid fa-play"></i>
-      </div>
-    </div>
+    
     <div class="container">
       
 <div class="logocontainer">
@@ -30,18 +24,21 @@
 <h2 class="subtitle">
   <div><i class="fa-solid fa-code"></i><h1>Programmer</h1></div>
   <div><i class="fa-solid fa-brush"></i><h1>Artist</h1></div>
-  <div><i class="fa-solid fa-guitar"></i><h1>Bass Player</h1></div>
+  <div><i class="fa-solid fa-guitar"></i><h1>Bassist</h1></div>
 </h2>
 
 
 
 <div class="buttongroup">
-  <a href="artgallery.html"><button>Art</button></a>
-  <a href="requestadrawing.html"style="pointer-events:none;"><button style="opacity:50%;pointer-events:none;">Request A Free Drawing</button></a>
+  <a href="artgallery.html"class="pagehrefb"><button>Art</button></a>
+  <a href="requestadrawing.html"style="pointer-events:none;"class="pagehrefb"><button style="opacity:50%;pointer-events:none;">Request A Free Drawing</button></a>
   
+  <div class="socialbuttons">
    <a href="https://codepen.io/HudsonGoodman"target="_blank"><button><i class="fa-brands fa-codepen"></i></button></a>
    <a href="https://github.com/hudsongoodman"target="_blank"><button><i class="fa-brands fa-github"></i></button></a>
    <a href="https://open.spotify.com/user/mrrav9h3cri19c9cjw7g47pn9"target="_blank"><button><i class="fa-brands fa-spotify"></i></button></a>
+  <a href="https://discord.gg/46mgjejvnk"target="_blank"><button><i class="fa-brands fa-discord"></i></button></a>
+   </div>
    
 </div>
 
@@ -83,9 +80,20 @@ const params = {
     }
   ]
 }
+var email = document.getElementById('email');
+var message = document.getElementById('message');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
- 
-    if (message == "" || email == "") {
+    if (!filter.test(email.value)){
+      document.getElementById('feedbackcontainer').classList.add("shakeX");
+      
+       
+        setTimeout(function () {
+         document.getElementById('feedbackcontainer').classList.remove("shakeX");
+        }, 2000);
+    return false;
+    
+    } else if (message == "" || email == "") {
        document.getElementById('feedbackcontainer').classList.add("shakeX");
        
         setTimeout(function () {
