@@ -10,6 +10,9 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
 
+@import url('https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css');
+
+
   html {
   scroll-behavior: smooth;
 }
@@ -31,7 +34,6 @@ body{
   .title{
   font-family: 'Playfair Display', serif;
     font-size:70px;
-    animation:fadeInUp 1s 1;
     text-align:center;
 }
 .container{
