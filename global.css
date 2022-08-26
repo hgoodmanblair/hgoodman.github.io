@@ -37,7 +37,7 @@ body{
 .container{
   border:2px solid black;
   width:50vw;
-  margin-bottom:30px;
+  margin:30px;
   height:auto;
    display:flex;
   justify-content:center;
@@ -46,25 +46,7 @@ body{
   flex-direction:column;
   padding:20px 0px;
 }
-.header{
-  margin-top:30px;
-   border:2px solid black;
-  width:50vw;
-  height:5vh;
-   display:flex;
-   background: white;
-  align-items:center;
-  flex-direction:row;
-  margin-bottom:-2px;
-  
-}
-.headerbuttons{
-  margin:0px 10px;
-}
-.headerbuttons > i{
-  margin:5px;
-  font-size:20px;
-}
+
 @media only screen and (max-width: 700px) {
   body{
       height:auto;
