@@ -26,14 +26,27 @@
       transition:0.2s;
       background:black;
       color:white;
-       font-family: 'Playfair Display', serif;
        font-size:20px;
     }
     #submitb:hover{
       transition:0.2s;
       cursor:pointer;
     }
-    
+    .drawingstylecontainer{
+     font-family: 'Playfair Display', serif;
+      display:flex;
+      flex-direction:column;
+      font-size:20px;
+      justify-content:center;
+      align-items:center;
+      margin:20px;
+    }
+    .drawingstylecontainer > span{
+    display:flex;
+      flex-direction:row;
+      justify-content:center;
+      align-items:center;
+    }
     
   </style>
   <body>
@@ -52,6 +65,12 @@
       <input id="extradetails"placeholder="extra drawing details...(optional)">
 <input id="imgsrc"placeholder="reference image url...(optional)">
 
+<div class="drawingstylecontainer">
+<span><input type="radio" name="drawingstyle" value="pencil_sketch" />Thin pencil sketch</span>
+<span><input type="radio" name="drawingstyle" value="fine_pen_drawing" />Black and white fine pen outline</span>
+<span><input type="radio" name="drawingstyle" value="fine_pen_with_color" />Black fine pen with color</span>
+</div>
+
       
       
       <button id="submitb"onclick="sendMessage()">Submit Request</button>
@@ -69,6 +88,7 @@ var drawingname  = document.getElementById("drawingname").value;
 var colorpalette  = document.getElementById("colorpalette").value;
 var extradetails  = document.getElementById("extradetails").value;
 var imagesrc = document.getElementById("imgsrc").value;
+var drawingstyle = document.querySelector('input[name="drawingstyle"]:checked').value;
 
       const request = new XMLHttpRequest();
 request.open("POST", "https://discord.com/api/webhooks/1006241072789340310/DsYbzz08X-611pQ35MxH4LFBpbwuBCVT4Efgsl0dlnkZUJPK1YuekiRexZm2rJbyXMs6" );
@@ -103,6 +123,10 @@ const params = {
          {
           "name": "`Color Palette`",
           "value": `${colorpalette}`
+        },
+         {
+          "name": "`Drawing Style`",
+          "value": `${drawingstyle}`
         },
          {
           "name": "`Extra Details`",
