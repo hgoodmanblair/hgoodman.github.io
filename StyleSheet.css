@@ -2,7 +2,10 @@ body{
   background-image:url("images/homepagebackground.png");
   background-size:cover;
   background-position:center;
-  
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 .logocontainer{
   border:2px solid black;
