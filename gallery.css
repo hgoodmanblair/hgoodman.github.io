@@ -17,19 +17,17 @@
 }
 .artgallery{
 
-  border:2px solid black;
   width:80vw;
   height:auto;
    display:flex;
   justify-content:center;
   align-items:center;
     flex-wrap:wrap;
-  background:black;
 
 }
 .image,#image{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  filter:brightness(100%);
+  box-shadow: lightgrey 0px 8px 24px;
+  border-radius:5px;
   width:300px;
   margin:20px;
   display:flex;
