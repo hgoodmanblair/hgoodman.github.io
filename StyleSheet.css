@@ -2,6 +2,7 @@ body{
   background-size:cover;
   background-position:center;
   display:flex;
+  width:100vw;
   justify-content:center;
   align-items:center;
 }
@@ -158,6 +159,11 @@ background:black;
  outline:none;
  cursor:pointer;
 }
+#emailbottom{
+  color:grey;
+  font-family:roboto;
+  font-size:30px;
+}
 @media only screen and (max-width: 700px) {
   body{
   background:white;
@@ -207,6 +213,9 @@ background:black;
   flex-direction:row;
   align-items:center;
   justify-content:center;
+}
+#emailbottom{
+  font-size:26px;
 }
   
 }
