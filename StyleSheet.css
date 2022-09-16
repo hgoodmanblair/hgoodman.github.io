@@ -1,5 +1,4 @@
 body{
-  background-image:url("images/homepagebackground.png");
   background-size:cover;
   background-position:center;
   display:flex;
@@ -7,33 +6,30 @@ body{
   align-items:center;
 }
 .logocontainer{
-  border:2px solid black;
-      padding:20px 20px;
-        margin:10px;
-        background:black;
           transition:0.2s;
           display:flex;
           align-items:center;
           justify-content:center;
           flex-direction:column;
+		  width:200px;
+		  height:200px;
+}
+.logowrapper{
+	width:300px;
+	position:absolute;
+	animation:spin 7s infinite linear;
+}
+@keyframes spin{
+	from{transform:rotate(360deg);}
+	to{transform:rotate(0deg);}
 }
 .logo{
-  font-family: 'Playfair Display', serif;
-  font-weight:bold;
-    font-size:calc(30px + 4vw);
-    animation:fadeInUp 1s 1;
-    text-align:center;
-color:white;
-  
-}
-.logofullname{
-    font-family: 'Playfair Display', serif;
-    text-align:center;
-    color:white;
+	font-family:roboto;
+	font-size:50px;
+	font-weight:bold;
 }
 .subtitle{
-  font-family: 'Playfair Display', serif;
-  margin-top:-20px;
+  font-family: roboto;
   animation:fadeInUp 1s 1;
   text-align:center;
   display:flex;
@@ -76,7 +72,7 @@ color:white;
   align-items:center;
   justify-content:center;
     font-size:25px;
-      font-family: 'Playfair Display', serif;
+      font-family: roboto;
 }
 .buttongroup > .pagehrefb > button:hover{
   background:black;
@@ -117,7 +113,7 @@ color:white;
   align-items:center;
   justify-content:center;
     font-size:25px;
-      font-family: 'Playfair Display', serif;
+      font-family: roboto;
 }
 .buttongroup > .socialbuttons > a > button:hover{
 background:black;
@@ -158,7 +154,7 @@ background:black;
   color:white;
  font-size:20px;
  border:27px solid black;
- font-family:'Playfair Display', serif;
+ font-family:roboto;
  outline:none;
  cursor:pointer;
 }
