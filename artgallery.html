@@ -10,9 +10,9 @@
        <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
   </head>
   <body>
-<div class="container">
+    <script>
 
-  <div class="gobackhomeb"><a href="index.html"><i class="fa-solid fa-angles-left"></i></a></div>
+    </script>
     
     <div class="title">Art Gallery.</div>
     
@@ -30,7 +30,7 @@
       
       const artgallery = document.getElementById("artgallery");
       var numberofimages2021 = 22;
-      var numberofimages2022 = 46;
+      var numberofimages2022 = 47;
       
       var imagecount = numberofimages2021 + numberofimages2022;
 document.getElementById("totalimages").innerHTML = imagecount;
@@ -40,7 +40,7 @@ document.getElementById("totalimages").innerHTML = imagecount;
       ++numberofimages2022;
       
       //2022
-      for (i = 1; i <= 46; i++) {
+      for (i = 1; i <= 47; i++) {
         --numberofimages2022;
         const img = new Image(); // width, height
         img.id = "image";
@@ -64,7 +64,6 @@ artgallery.appendChild(img);
      
       
   
-    </div>
     </div>
   </body>
   </html>
