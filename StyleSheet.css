@@ -56,18 +56,21 @@ body{
   width:100%;
   flex-direction:column;
 }
-.buttongroup > .pagehrefb{
-  width:85%;
+.pagehrefb{
+	 display:flex;
+  align-items:center;
+  justify-content:center;
   height:auto;
-  margin:10px;
+  width:100%;
   text-decoration:none;
 }
-.buttongroup > .pagehrefb > button{
-  width:100%;
-  padding:0px 10px;
+.pagehrefb > button{
   height:70px;
+width:97%;
+font-weight:bold;
   border:2px solid black;
   background:none;
+  border-radius:10px;
   transition:0.2s;
   display:flex;
   align-items:center;
@@ -75,40 +78,41 @@ body{
     font-size:25px;
       font-family: roboto;
 }
-.buttongroup > .pagehrefb > button:hover{
+.pagehrefb > button:hover{
   background:black;
   color:white;
   transition:0.2s;
   cursor:pointer;
     box-shadow: none;
 }
-.buttongroup > .socialbuttons{
-  width:85%;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
+.socialbuttons{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:row;
+	width:100%;
 }
-.buttongroup > .socialbuttons > a > button > i{
+.socialbuttons > a > button > i{
   color:black;
   font-size:30px;
 }
-.buttongroup > .socialbuttons > a > button:hover > i{
+.socialbuttons > a > button:hover > i{
    color:white;
   transition:0.2s;
   cursor:pointer;
 }
-
-.buttongroup > .socialbuttons > a{
+.socialbuttons > a{
   width:25%;
+  margin:10px;
   text-decoration:none;
 }
-.buttongroup > .socialbuttons > a > button{
+.socialbuttons > a > button{
   width:100%;
   padding:0px 10px;
   height:70px;
   border:2px solid black;
   background:none;
+  border-radius:10px;
   transition:0.2s;
   display:flex;
   align-items:center;
@@ -116,11 +120,14 @@ body{
     font-size:25px;
       font-family: roboto;
 }
-.buttongroup > .socialbuttons > a > button:hover{
+.socialbuttons > a > button:hover{
 background:black;
   color:white;
   transition:0.2s;
   cursor:pointer;
+}
+.socialbp{
+	display:none;
 }
 .feedbackcontainer{
   display:flex;
@@ -128,15 +135,18 @@ background:black;
   align-items:center;
   flex-direction:row;
   height:50px;
-  margin-bottom:10px;
-  width:85%;
+  padding:10px 0px;
+  width:100%;
 }
 #feedback{
   width:60%;
+  margin-left:10px;
   height:100%;
   border-radius:0px;
   border:2px solid black;
   outline:none;
+  border-radius:10px;
+    font-weight:bold;
 }
 #email{
   width:30%;
@@ -144,6 +154,9 @@ background:black;
   border-radius:0px;
   border:2px solid black;
    outline:none;
+     border-radius:10px;
+	    margin:10px;
+		  font-weight:bold;
 }
 #sendfeedbackb{
   display:flex;
@@ -151,8 +164,10 @@ background:black;
   align-items:center;
   height:100%;
   width:10%;
+    margin:10px;
   background:black;
   color:white;
+    border-radius:10px;
  font-size:20px;
  border:27px solid black;
  font-family:roboto;
@@ -165,16 +180,30 @@ background:black;
   font-size:30px;
 }
 @media only screen and (max-width: 700px) {
+
   body{
   background:white;
   background-size:cover;
   background-position:center;
   
 }
+#email{text-align:center;}
+ #feedback{text-align:center;}
   .buttongroup{
     flex-direction:column;
     width:100%;
   }
+  .socialbuttons{
+	  flex-direction:column;
+  }
+  .socialbuttons > a{
+	  width:100%;
+  }
+  .socialbp{
+	display:flex;
+	margin:10px;
+	font-weight:bold;
+}
   .buttongroup > a{
     color:black;
     width:100%;
@@ -184,9 +213,9 @@ background:black;
   align-items:center;
   }
   .buttongroup > a > button{
-    width:50vw;
-    margin:10px;
+    width:100%;
     color:black;
+	margin:10px 0px;
   }
   .logo{
     font-size:50px;
@@ -194,15 +223,16 @@ background:black;
   .feedbackcontainer{
     flex-direction:column;
     width:100%;
-    height:30vh;
+    height:50vh;
   }
   #feedback,#email{
-    width:78%;
-    height:50%;
+  width:100%;
+  margin:10px 0px;
   }
   #sendfeedbackb{
-    height:30%;
-    width:80%;
+width:100%;
+height:10vh;
+ margin:10px 0px;
   }
   .subtitle{
     flex-direction:column;
