@@ -84,6 +84,7 @@ font-weight:bold;
   transition:0.2s;
   cursor:pointer;
     box-shadow: none;
+		 transform:rotate(2deg);
 }
 .socialbuttons{
 	display:flex;
@@ -123,11 +124,17 @@ font-weight:bold;
 .socialbuttons > a > button:hover{
 background:black;
   color:white;
-  transition:0.2s;
   cursor:pointer;
+  	font-size:25px;
+	transition:0.2s;
+	 transform:rotate(5deg);
 }
 .socialbp{
 	display:none;
+}
+@keyframes width{
+	from{width:0%;color:black;font-size:0px;}
+	to{width:100%;color:white;font-size:20px;}
 }
 .feedbackcontainer{
   display:flex;
@@ -145,8 +152,10 @@ background:black;
   border-radius:0px;
   border:2px solid black;
   outline:none;
+  text-align:center;
   border-radius:10px;
     font-weight:bold;
+	
 }
 #email{
   width:30%;
@@ -156,7 +165,13 @@ background:black;
    outline:none;
      border-radius:10px;
 	    margin:10px;
+		text-align:center;
 		  font-weight:bold;
+}
+#email:hover, #feedback:hover{
+	 transform:rotate(2deg);
+	 transition:0.2s;
+	 cursor:pointer;
 }
 #sendfeedbackb{
   display:flex;
@@ -171,17 +186,26 @@ background:black;
  font-size:20px;
  border:27px solid black;
  font-family:roboto;
+ font-weight:bold;
  outline:none;
  cursor:pointer;
+ transition:0.3s;
+ transform:rotate(0deg);
+}
+#sendfeedbackb:hover{
+	font-size:25px;
+	transition:0.3s;
+	 transform:rotate(10deg);
 }
 #emailbottom{
-  color:#037bfc;
+  color:grey;
   font-family:roboto;
   font-size:30px;
   font-weight:bold;
    text-decoration: underline;
-   
+   transition:0.3s;
 }
+#emailbottom:hover{color:#037bfc;letter-spacing:5px;transition:0.3s;}
 
 @media only screen and (max-width: 700px) {
 
@@ -253,4 +277,3 @@ height:10vh;
 }
   
 }
-
