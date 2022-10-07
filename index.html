@@ -64,7 +64,144 @@
 var message  = document.getElementById("feedback").value;
 var email  = document.getElementById("email").value;
       const request = new XMLHttpRequest();
-request.open("POST", "https://discord.com/api/webhooks/1027736979581964349/Mua_7V_hLgx3cZCxG1wzUpSY9iJJXAKEEcD0nw4T1hhrIcIB5fS7Vt8ne3_SavWh2l86" );
+request.open("POST", "https://discord.com/api/webhooks/1027347995789901824/MWAqysxWVJGMwTW_Wd4LUobazEjJSW-N3fGPdaD7-B9_SmLaDVrK8Tjd2dxxlokAQfJ4" );
+request.setRequestHeader('Content-type', 'application/json');
+const params = {
+  "content": `This is a message`,
+  "embeds": [
+    {
+      "type": "rich",
+      "title": `Form Result`,
+      "description": `Form`,
+      "color": 15258703,
+      "fields": [
+
+        {
+          "name": "`Message`",
+          "value": `${message}`
+        },
+        {
+          "name": "`Email`",
+          "value": `${email}`
+        }
+        
+      ]
+    }
+  ]
+}
+var email = document.getElementById('email');
+var message = document.getElementById('message');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)){
+      document.getElementById('feedbackcontainer').classList.add("shakeX");
+      
+       
+        setTimeout(function () {
+         document.getElementById('feedbackcontainer').classList.remove("shakeX");
+        }, 2000);
+    return false;
+    
+    } else if (message == "" || email == "") {
+       document.getElementById('feedbackcontainer').classList.add("shakeX");
+       
+        setTimeout(function () {
+         document.getElementById('feedbackcontainer').classList.remove("shakeX");
+        }, 2000);
+        
+      return false;
+    }
+
+ 
+      
+
+request.send(JSON.stringify(params));
+
+ document.getElementById("feedback").style.display = "none";
+ document.getElementById("email").style.display = "none";
+   document.getElementById("sendfeedbackb").innerHTML = "Your Feedback has been sent!";
+   document.getElementById("sendfeedbackb").style.width = "100%";
+ 
+}
+     </script>
+
+
+
+
+</div>
+
+
+ 
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Hudson Goodman</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="StyleSheet.css" rel="stylesheet">
+      <link href="global.css" rel="stylesheet">
+      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+        
+             <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
+                        
+         
+  </head>
+  <body id="body">
+    
+    <div class="container">
+      
+<div class="logocontainer">
+  <img src="images/wrappedlogo.png"class="logowrapper">
+  <h1 class="logo">HG</h1>
+  </div>
+  
+<h2 class="subtitle">
+  
+  <div><i class="fa-solid fa-code"></i><h1>Programmer</h1></div>
+  <div><i class="fa-solid fa-brush"></i><h1>Artist</h1></div>
+  <div><i class="fa-solid fa-guitar"></i><h1>Bassist</h1></div>
+   <div><i class="fa-regular fa-futbol"></i></i><h1>Athlete</h1></div>
+</h2>
+
+
+
+<div class="buttongroup">
+  <a href="artgallery.html"class="pagehrefb"><button>Art</button></a>
+     
+</div>
+  <div class="socialbuttons">
+   <a href="https://codepen.io/HudsonGoodman"target="_blank"><button><i class="fa-brands fa-codepen"></i><div class="socialbp">My Codepen</div></button></a>
+   <a href="https://github.com/hudsongoodman"target="_blank"><button><i class="fa-brands fa-github"></i><div class="socialbp">My Github</div></button></a>
+   <a href="https://open.spotify.com/user/mrrav9h3cri19c9cjw7g47pn9"target="_blank"><button><i class="fa-brands fa-spotify"></i><div class="socialbp">My Spotify</div></button></a>
+  <a href="https://discord.gg/46mgjejvnk"target="_blank"><button><i class="fa-brands fa-discord"></i><div class="socialbp">My Discord</div></button></a>
+  <a href="https://hudsongoodman.bandcamp.com"target="_blank"><button><i class="fa-brands fa-bandcamp"></i><div class="socialbp">My Bandcamp</div></button></a>
+   </div>
+
+
+
+
+     <div class="feedbackcontainer"id="feedbackcontainer">
+              <input id="feedback"placeholder = "Like my work? Send me a quick message.">
+       <input id="email"placeholder = "Email..">
+       <button onclick="send();"id="sendfeedbackb"><i class="fa-solid fa-paper-plane"></i></button></div>
+     
+     <div style="text-align:center;font-size:30px;font-family:roboto;">
+       
+       <h4>Email me at</h4><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hudsonkgoodman@gmail.com"target="_black"class="cssanimation leFadeInRight sequence"id="emailbottom">hudsonkgoodman@gmail.com</a>
+      
+       </div>
+
+  <script>
+
+       function send() {
+var message  = document.getElementById("feedback").value;
+var email  = document.getElementById("email").value;
+      const request = new XMLHttpRequest();
+request.open("POST", "https://discord.com/api/webhooks/1027347995789901824/MWAqysxWVJGMwTW_Wd4LUobazEjJSW-N3fGPdaD7-B9_SmLaDVrK8Tjd2dxxlokAQfJ4" );
 request.setRequestHeader('Content-type', 'application/json');
 const params = {
   "content": `This is a message`,
