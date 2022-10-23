@@ -11,6 +11,7 @@
   padding:5px;
     margin:10px;
    font-family: roboto;
+   border-radius:10px;
 
 
 }
@@ -51,5 +52,6 @@ font-family:roboto;
   align-items:center;
   padding:5px;
     margin:10px;
+	  border-radius:10px;
    font-family: roboto;
 }
