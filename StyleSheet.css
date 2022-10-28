@@ -233,6 +233,7 @@ background:black;
   .socialbp{
 	display:flex;
 	margin:10px;
+	color:red;
 	font-weight:bold;
 }
   .buttongroup > a{
