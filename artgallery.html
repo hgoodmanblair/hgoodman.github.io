@@ -13,6 +13,7 @@
     <script>
 
     </script>
+    
     <div class="title">Art Gallery.</div>
     
      <div class="subtitle">2021 - 2022</div>
@@ -41,19 +42,29 @@ document.getElementById("totalimages").innerHTML = imagecount;
       //2022
       for (i = 1; i <= 51; i++) {
         --numberofimages2022;
-        const img = new Image(); // width, height
+        const img =  document.createElement("img"); // width, height
         img.id = "image";
 img.src = "images/gallery/2022_" + numberofimages2022 + ".jpg";
 artgallery.appendChild(img);
+
+const label = document.createElement("p"); // width, height
+        label.id = "label";
+		label.innerHTML = "2022";
+artgallery.appendChild(label);
 }
 
       //2021
       for (i = 1; i <= 22; i++) {
         --numberofimages2021;
-        const img = new Image(); // width, height
+        const img =  document.createElement("img"); // width, height
         img.id = "image";
 img.src = "images/gallery/2021_" + numberofimages2021 + ".jpg";
 artgallery.appendChild(img);
+
+ const label = document.createElement("p"); // width, height
+        label.id = "label";
+		label.innerHTML = "2021";
+artgallery.appendChild(label);
 }
 
 
