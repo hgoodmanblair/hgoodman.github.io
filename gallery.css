@@ -4,7 +4,7 @@
 .subtitle{
  font-size:25px;
   background:black;
-  color:white;
+  color:#ff4c38;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -42,14 +42,14 @@ border-radius:0% 100% 100% 0% / 52% 50% 50% 48%;
 #label{
 	transition:0.3s;
 	font-size:15px;
-	color:black;
+	color:#ff4c38;
 z-index:-10;
 margin-left:-90px;
 font-family:roboto;
 display:flex;
   justify-content:center;
   align-items:center;
-background:lightsteelblue;
+background:black;
 height:100px;
 width:40px;
 border-radius:0px;
@@ -67,7 +67,7 @@ font-family:roboto;
 #totalimages{
   font-size:25px;
   background:black;
-  color:white;
+  color:#ff4c38;
   display:flex;
   justify-content:center;
   align-items:center;
