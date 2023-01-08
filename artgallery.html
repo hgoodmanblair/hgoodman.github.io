@@ -28,34 +28,42 @@
       
       <script>
       
-      const artgallery = document.getElementById("artgallery");
+     const artgallery = document.getElementById("artgallery");
       var numberofimages2021 = 22;
       var numberofimages2022 = 54;
-      
-      var imagecount = numberofimages2021 + numberofimages2022;
+      var numberofimages2023 = 1;
+           
+      var imagecount = numberofimages2021 + numberofimages2022 + numberofimages2023;
 document.getElementById("totalimages").innerHTML = imagecount;
       
 
+
+      //2023
+      for (i = 1; i <= numberofimages2023; i++) {
+        
+        const img =  document.createElement("img"); // width, height
+        img.id = "image";
+img.src = "images/gallery/2023_" + i + ".jpg";
+artgallery.appendChild(img);
+}
       
       //2022
       for (i = 1; i <= numberofimages2022; i++) {
         
         const img =  document.createElement("img"); // width, height
         img.id = "image";
-img.src = "images/gallery/2022_" + numberofimages2022 + ".jpg";
+img.src = "images/gallery/2022_" + i + ".jpg";
 artgallery.appendChild(img);
---numberofimages2022;
 }
+
 
       //2021
       for (i = 1; i <= numberofimages2021; i++) {
       
         const img =  document.createElement("img"); // width, height
         img.id = "image";
-img.src = "images/gallery/2021_" + numberofimages2021 + ".jpg";
+img.src = "images/gallery/2021_" + i + ".jpg";
 artgallery.appendChild(img);
-  --numberofimages2021;
-
 }
 
 
