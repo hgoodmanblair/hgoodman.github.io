@@ -1,78 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Gallery | Hudson Goodman</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="gallery.css" rel="stylesheet">
-      <link href="global.css" rel="stylesheet">
-       <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-       <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
-  </head>
-  <body>
-    <script>
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Gallery | Hudson Goodman</title>
+<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href="gallery.css" rel="stylesheet"> 
+<link href="global.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+<link rel="icon" type="image/x-icon" href="images/sitefavicon.png"> 
+</head> 
+<body> 
+<script> </script> 
+<div class="title">Art Gallery.</div> 
+<div class="subtitle">2021 - 2023</div> 
+<div class="subtitle">New Art Every Month!</div> 
+<div class="incounting"><p id="totalimages"></p>Total Images In Counting</p></div> 
+<div class="artgallery" id="artgallery"> 
+<script> const artgallery = document.getElementById("artgallery"); var numberofimages2021 = 22; var numberofimages2022 = 54; var numberofimages2023 = 6; var imagecount = numberofimages2021 + numberofimages2022 + numberofimages2023; document.getElementById("totalimages").innerHTML = imagecount; 
 
-    </script>
-    
-    <div class="title">Art Gallery.</div>
-    
-     <div class="subtitle">2021 - 2023</div>
-    
-     <div class="subtitle">New Art Every Month!</div>
-     
+for (i = numberofimages2023; i >= 1; i--) { const img = document.createElement("img"); img.id = "image"; img.src = "images/gallery/2023_" + i + ".jpg"; artgallery.appendChild(img); } 
 
-    
-    <div class="incounting"><p id="totalimages"></p>Total Images In Counting</p></div>
+for (i = numberofimages2022; i >= 1; i--) { const img = document.createElement("img"); img.id = "image"; img.src = "images/gallery/2022_" + i + ".jpg"; artgallery.appendChild(img); } 
 
-    <div class="artgallery"id="artgallery">
-      
-      <script>
-      
-     const artgallery = document.getElementById("artgallery");
-      var numberofimages2021 = 22;
-      var numberofimages2022 = 54;
-      var numberofimages2023 = 5;
-           
-      var imagecount = numberofimages2021 + numberofimages2022 + numberofimages2023;
-document.getElementById("totalimages").innerHTML = imagecount;
-      
-
-
-      //2023
-      for (i = 1; i <= numberofimages2023; i++) {
-        
-        const img =  document.createElement("img"); // width, height
-        img.id = "image";
-img.src = "images/gallery/2023_" + i + ".jpg";
-artgallery.appendChild(img);
-}
-      
-      //2022
-      for (i = 1; i <= numberofimages2022; i++) {
-        
-        const img =  document.createElement("img"); // width, height
-        img.id = "image";
-img.src = "images/gallery/2022_" + i + ".jpg";
-artgallery.appendChild(img);
-}
-
-
-      //2021
-      for (i = 1; i <= numberofimages2021; i++) {
-      
-        const img =  document.createElement("img"); // width, height
-        img.id = "image";
-img.src = "images/gallery/2021_" + i + ".jpg";
-artgallery.appendChild(img);
-}
-
-
-      </script>
-      
-    
-     
-      
-  
-    </div>
-  </body>
-  </html>
+for (i = numberofimages2021; i >= 1; i--) { const img = document.createElement("img"); img.id = "image"; img.src = "images/gallery/2021_" + i + ".jpg"; artgallery.appendChild(img); } 
+</script> 
+</div> 
+</body> 
+</html>
