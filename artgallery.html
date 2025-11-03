@@ -1,28 +1,53 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<title>Gallery | Hudson Goodman</title>
-<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link href="gallery.css" rel="stylesheet"> 
-<link href="global.css" rel="stylesheet"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
-<link rel="icon" type="image/x-icon" href="images/sitefavicon.png"> 
-</head> 
-<body> 
-<script> </script> 
-<div class="title">Art Gallery.</div> 
-<div class="subtitle">2021 - 2023</div> 
-<div class="subtitle">New Art Every Month!</div> 
-<div class="incounting"><p id="totalimages"></p>Total Images In Counting</p></div> 
-<div class="artgallery" id="artgallery"> 
-<script> const artgallery = document.getElementById("artgallery"); var numberofimages2021 = 22; var numberofimages2022 = 54; var numberofimages2023 = 6; var imagecount = numberofimages2021 + numberofimages2022 + numberofimages2023; document.getElementById("totalimages").innerHTML = imagecount; 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Hudson Goodman</title>
 
-for (i = numberofimages2023; i >= 1; i--) { const img = document.createElement("img"); img.id = "image"; img.src = "images/gallery/2023_" + i + ".jpg"; artgallery.appendChild(img); } 
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="images/sitefavicon.png" />
+  </head>
 
-for (i = numberofimages2022; i >= 1; i--) { const img = document.createElement("img"); img.id = "image"; img.src = "images/gallery/2022_" + i + ".jpg"; artgallery.appendChild(img); } 
+  <body>
+    <div class="title animate__animated animate__fadeInUp">Art Gallery</div>
+    <div class="subtitle animate__animated animate__fadeInUp">2021 - 2025</div>
+    
 
-for (i = numberofimages2021; i >= 1; i--) { const img = document.createElement("img"); img.id = "image"; img.src = "images/gallery/2021_" + i + ".jpg"; artgallery.appendChild(img); } 
-</script> 
-</div> 
-</body> 
+    <div class="incounting animate__animated animate__fadeInUp">
+      <p><span id="totalimages"></span> Total Pieces</p>
+    </div>
+
+    <div class="artgallery" id="artgallery"></div>
+
+    <script>
+      const artgallery = document.getElementById("artgallery");
+      const numberofimages2021 = 22;
+      const numberofimages2022 = 54;
+      const numberofimages2023 = 6;
+      const totalImages =
+        numberofimages2021 + numberofimages2022 + numberofimages2023;
+
+      document.getElementById("totalimages").textContent = totalImages;
+
+      function addImages(year, count) {
+        for (let i = count; i >= 1; i--) {
+          const img = document.createElement("img");
+          img.src = `images/gallery/${year}_${i}.jpg`;
+          img.alt = `Artwork ${i} from ${year}`;
+          img.classList.add("gallery-image");
+          artgallery.appendChild(img);
+        }
+      }
+
+      addImages(2023, numberofimages2023);
+      addImages(2022, numberofimages2022);
+      addImages(2021, numberofimages2021);
+    </script>
+  </body>
 </html>
