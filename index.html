@@ -1,143 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Home | Hudson Goodman</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="StyleSheet.css" rel="stylesheet">
-      <link href="global.css" rel="stylesheet">
-      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
-        
-             <link rel="icon" type="image/x-icon" href="images/sitefavicon.png">
-                        
-         
+
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/x-icon" href="images/sitefavicon.png" />
   </head>
-  <body id="body">
-    
-    <div class="container">
-      
-<div class="logocontainer">
-  <img src="images/wrappedlogo.png"class="logowrapper">
-  <h1 class="logo">HG</h1>
-  </div>
-  
-<h2 class="subtitle">
-  
-  <div><i class="fa-solid fa-pencil"></i><h1 class="cssanimation leFadeIn sequence">Student</h1></div>
-   <div><i class="fa-regular fa-futbol"></i></i><h1 class="cssanimation leFadeIn sequence">Athlete</h1></div>
-</h2>
 
+  <body>
+    <div class="logocontainer">
+      <img src="images/wrappedlogo.png" class="logowrapper" alt="logo" />
+      <h1 class="logo">HG</h1>
+    </div>
 
+    <div class="subtitle">
+      <div>
+        <i class="fa-solid fa-pencil"></i>
+        <h1 class="animate__animated animate__fadeInUp">Student</h1>
+      </div>
+      <div>
+        <i class="fa-regular fa-futbol"></i>
+        <h1 class="animate__animated animate__fadeInUp">Athlete</h1>
+      </div>
+    </div>
 
-<div class="buttongroup">
-  <a href="artgallery.html"class="pagehrefb"><button><h3 class="cssanimation leFadeIn sequence">Art Gallery</h3></button></a>
-     
-</div>
-  <div class="socialbuttons">
-   <a href="https://codepen.io/HudsonGoodman"target="_blank"><button><i class="fa-brands fa-codepen"></i><div class="socialbp">My Codepen</div></button></a>
-   <a href="https://github.com/hgoodmanblair"target="_blank"><button><i class="fa-brands fa-github"></i><div class="socialbp">My Github</div></button></a>
- 
+    <div class="buttongroup">
+      <a href="artgallery.html" class="pagehrefb animate__animated animate__fadeInUp">Art Gallery</a>
+      <a href="https://sites.google.com/mcpsmd.net/hudson-goodman-cap-portfolio/home"target="_blank" class="pagehrefb animate__animated animate__fadeInUp">CAP Program Portfolio</a>
+    </div>
 
- 
-   </div>
+    <div class="socialbuttons">
+      <a href="https://codepen.io/HudsonGoodman" target="_blank" class="sociallink">
+        <i class="fa-brands fa-codepen"></i>
+      </a>
+      <a href="https://github.com/hgoodmanblair" target="_blank" class="sociallink">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
 
-   
-     
-     
-     
-     
-     <div style="text-align:center;font-size:30px;font-family:roboto;">
-       
-       <h4>Email me at</h4><a href="mailto:hudsonkgoodman@gmail.com"target="_black"class="cssanimation leFadeIn sequence"id="emailbottom">hudsonkgoodman@gmail.com</a>
-      
-       </div>
-
-
-  <script>
-
-       function send() {
-var message  = document.getElementById("feedback").value;
-var email  = document.getElementById("email").value;
-      const request = new XMLHttpRequest();
-request.open("POST", "https://discord.com/api/webhooks/1027736979581964349/Mua_7V_hLgx3cZCxG1wzUpSY9iJJXAKEEcD0nw4T1hhrIcIB5fS7Vt8ne3_SavWh2l86" );
-request.setRequestHeader('Content-type', 'application/json');
-const params = {
-  "content": `This is a message`,
-  "embeds": [
-    {
-      "type": "rich",
-      "title": `Form Result`,
-      "description": `Form`,
-      "color": 15258703,
-      "fields": [
-
-        {
-          "name": "`Message`",
-          "value": `${message}`
-        },
-        {
-          "name": "`Email`",
-          "value": `${email}`
-        }
-        
-      ]
-    }
-  ]
-}
-var email = document.getElementById('email');
-var message = document.getElementById('message');
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-    if (!filter.test(email.value)){
-      document.getElementById('feedbackcontainer').classList.add("shakeX");
-      
-       
-        setTimeout(function () {
-         document.getElementById('feedbackcontainer').classList.remove("shakeX");
-        }, 2000);
-    return false;
-    
-    } else if (message == "" || email == "") {
-       document.getElementById('feedbackcontainer').classList.add("shakeX");
-       
-        setTimeout(function () {
-         document.getElementById('feedbackcontainer').classList.remove("shakeX");
-        }, 2000);
-        
-      return false;
-    }
-
- 
-      
-
-request.send(JSON.stringify(params));
-
-
-	document.getElementById("sendfeedbackb").innerHTML = "Processing...";
- document.getElementById("feedback").style.display = "none";
- document.getElementById("email").style.display = "none";
-document.getElementById("sendfeedbackb").style.animation = "width 1s 1";
-
- setTimeout(function () {
-document.getElementById("sendfeedbackb").innerHTML = "Your Feedback has been sent!";
-document.getElementById("sendfeedbackb").style.color = "#037bfc";
-		 }, 1000);
-
-setTimeout(function () {
-	document.getElementById("sendfeedbackb").style.width = "100%";
-	 }, 1000);
- 
-}
-     </script>
-
-
-
-
-</div>
-
-
- 
-
-</body>
+    <div class="emailsection">
+      <h4>Email me at</h4>
+      <a href="mailto:hudsonkgoodman@gmail.com" id="emailbottom" class="animate__animated animate__fadeInUp">hudsonkgoodman@gmail.com</a>
+    </div>
+  </body>
 </html>
