@@ -16,7 +16,7 @@
 
   <body>
     <div class="title animate__animated animate__fadeInUp">Art Gallery</div>
-    <div class="subtitle animate__animated animate__fadeInUp">2021 - 2025</div>
+    <div class="subtitle animate__animated animate__fadeInUp">2021 - 2026</div>
     
 
     <div class="incounting animate__animated animate__fadeInUp">
@@ -30,8 +30,9 @@
       const numberofimages2021 = 22;
       const numberofimages2022 = 54;
       const numberofimages2023 = 6;
+      const numberofimages2026 = 2;
       const totalImages =
-        numberofimages2021 + numberofimages2022 + numberofimages2023;
+        numberofimages2021 + numberofimages2022 + numberofimages2023 + numberofimages2026;
 
       document.getElementById("totalimages").textContent = totalImages;
 
@@ -45,6 +46,7 @@
         }
       }
 
+      addImages(2026, numberofimages2026);
       addImages(2023, numberofimages2023);
       addImages(2022, numberofimages2022);
       addImages(2021, numberofimages2021);
